@@ -4,5 +4,6 @@ github:
   
 copyright: false
 
+footer: false
 site_footer: false
-site_footer: FY
+site_footer: no
