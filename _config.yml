@@ -3,4 +3,6 @@ github:
   is_project_page: false
   
 copyright: false
-site_footer: 飞鱼
+
+site_footer: false
+site_footer: FY
