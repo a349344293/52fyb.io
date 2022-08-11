@@ -7,5 +7,7 @@ footer-display: false
 footer-display: none
 github:
   footer: false
+github:
   footer-display: false
+github:
   footer-display: none
