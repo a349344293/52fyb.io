@@ -5,5 +5,5 @@ github:
 copyright: false
 
 footer: false
-site_footer: false
-site_footer: no
+footer-display: false
+footer-display: none
