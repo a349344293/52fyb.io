@@ -1,5 +1,6 @@
 theme: jekyll-theme-cayman
 footer-display: false
+footer-display: none
 footer: false
 footer: none
 github:
