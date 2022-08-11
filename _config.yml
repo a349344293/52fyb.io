@@ -1,7 +1,6 @@
 theme: jekyll-theme-cayman
 github:
   is_project_page: false 
-  footer-display: false
 copyright: false
 footer: false
 footer-display: false
