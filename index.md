@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+## 欢迎使用飞鱼软件
 
-You can use the [editor on GitHub](https://github.com/a349344293/52fyb.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+ 请进入网站下载最新版本软件[www.52fyb.cn](http://www.52fyb.cn)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 联系我们
 
-### Markdown
+[点击查看](https://mp.weixin.qq.com/s/cFDRjuO82Txs3zoP56RitA)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### 飞鱼软件微信公众号
+![飞鱼软件公众号](https://img.gejiba.com/images/f9f6f2dcd3ae89fb0ec04c15bf9f2506.jpg "飞鱼软件微信公众号")
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/a349344293/52fyb.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
