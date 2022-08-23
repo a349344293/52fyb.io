@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <list>
     <fNewNotice>true</fNewNotice>
     <ver>003</ver>
@@ -9,5 +8,3 @@
     <ServIp>118.195.200.56</ServIp>
     <ServPort>6629</ServPort>
 </list>
-
-
