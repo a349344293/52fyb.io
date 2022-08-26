@@ -2,11 +2,11 @@
 <Update>
   <Soft Name="飞鱼开票清单助手(多合一版)">
     <SoftName>飞鱼开票清单助手(多合一版)</SoftName>
-    <Verson>3.9.7.0</Verson>
-    <Size>3680360</Size>
-    <MD5>7FD963A76BA4AC3BABB1549D609E83DF</MD5>
+    <Verson>3.10.7.0</Verson>
+    <Size>3681184</Size>
+    <MD5>D24D3D2BC65E733EAC1BCC975E1FBF3A</MD5>
     <ExeMD5>BF0758EF26DAF2C772B225B8C2283E76</ExeMD5>
-    <DownLoad>https://52fybupd.lanzout.com/iigyu0997aja</DownLoad>
+    <DownLoad>https://52fybupd.lanzout.com/iLh6T0abij9i</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/InvoImptHelper/MultInOneVar/MinorUpd.zip</DownLoad> 
   </Soft>
   <LzApiInfo>
@@ -60,7 +60,6 @@
         <ParentNode></ParentNode>
         <targetUrl>url2</targetUrl>
       </retUrl>
-    </Api>
-    
+    </Api> 
   </LzApiInfo>
 </Update>
