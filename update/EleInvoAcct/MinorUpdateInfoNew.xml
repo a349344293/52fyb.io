@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="飞鱼电子发票台账(专业版)">
-    <Verson>3.4.27.5</Verson>
-    <Size>26367605</Size>
-    <MD5>0C32A3CDCA9BA15E983174992C2E7721</MD5>
+    <Verson>3.4.27.6</Verson>
+    <Size>26368787</Size>
+    <MD5>D5C8EECBBF3DEA78B7E223BC478AAE16</MD5>
+    <ExeMD5>5B48EC3E7DBC7FFF197647FACE9FAB3C</ExeMD5> 
     <ExeMD5>85F709A5063EAA48CBE8CCDBAE0DB5EB</ExeMD5>
     <ExeMD5>3033D1DC9C2B5C304EC140905437B3F3</ExeMD5>
     <ExeMD5>8B0FA89DB70F9527F6E7C315FACECC1F</ExeMD5>
@@ -25,8 +26,7 @@
     <ExeMD5>1C9A5E1B7DE8FF5A948E71F419511475</ExeMD5>
     <ExeMD5>BB5CC8CF607C3AF5BFFFDEA0F2EB8ED8</ExeMD5>
     <ExeMD5>622ADE4298C50DD90E51BC5E6755579B</ExeMD5>
-    <ExeMD5>FF364792BC6846E1C6F0DA0ABF7F8C2D</ExeMD5> 
-    <DownLoad>https://52fybupd.lanzout.com/iCYC10e4o30b</DownLoad>
+    <DownLoad>https://52fybupd.lanzout.com/iUfZg0ebr6ba</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/EleInvoAcct/EleInvoAcctProUpd.zip</DownLoad> 
   </Soft>
   <LzApiInfo>
