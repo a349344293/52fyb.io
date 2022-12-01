@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="飞鱼开票清单助手(基础版)">
-    <Verson>2.7.11.0</Verson>
-    <Size>4251677</Size>
-    <MD5>AFF58134EA703EF473E983F1A11C2121</MD5>
-    <DownLoad>https://52fybupd.lanzout.com/iJl7y0dqd7qb</DownLoad> 
+    <Verson>2.7.12.0</Verson>
+    <Size>4339683</Size>
+    <MD5>7A005BCA8B8E7480B3D8403BBE819F66</MD5>
+    <DownLoad>https://52fybupd.lanzout.com/insaV0hhq4ni</DownLoad> 
     <DownLoad>http://www.52fyb.cn/update/InvoImptHelper/BaseVar/BvMinorUpd.zip</DownLoad> 
   </Soft>
 
   <LzApiInfo>
     <Api>
+      <apiName>tool_bitefu_net</apiName>
+      <apiUrl>http://tool.bitefu.net/lanzou</apiUrl> 
+      <retCode>
+        <key>status</key>
+        <value>1</value>
+      </retCode>
+      <retUrl>
+        <ParentNode></ParentNode>
+        <targetUrl>info</targetUrl>
+      </retUrl>
+    </Api> 
+    <Api>
       <apiName>apis_jxcxin_cn</apiName>
-      <apiUrl>https://apis.jxcxin.cn/api/lanzou</apiUrl>
+      <apiUrl>https://api.leafone.cn/api/lanzou</apiUrl>
       <retCode>
         <key>code</key>
         <value>200</value>
@@ -20,44 +32,7 @@
         <ParentNode>data</ParentNode>
         <targetUrl>url</targetUrl>
       </retUrl>
-    </Api>   
-    <Api>
-      <apiName>pingping6</apiName>
-      <apiUrl>https://api.pingping6.com/tools/lanzou/index.php</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>1</value>
-      </retCode>
-      <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>file</targetUrl>
-      </retUrl>
-    </Api>
-
-    <Api>
-      <apiName>res_abeim_cn</apiName>
-      <apiUrl>https://res.abeim.cn/api-lanzou_jx</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>dow</targetUrl>
-      </retUrl>
-    </Api>
-    <Api>
-      <apiName>vvhan</apiName>
-      <apiUrl>http://www.aichest.cn/lanzou/api.php</apiUrl>
-      <retCode>
-        <key>state</key>
-        <value>1</value>
-      </retCode>
-      <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>url2</targetUrl>
-      </retUrl>
-    </Api>  
+    </Api> 
     <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
@@ -70,6 +45,30 @@
         <targetUrl>url</targetUrl>
       </retUrl>
     </Api>  
+    <Api>
+      <apiName>fyb_can_with_psw</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/new/index.php</apiUrl>
+      <retCode>
+        <key>status</key>
+        <value>1</value>
+      </retCode>
+      <retUrl>
+        <ParentNode></ParentNode>
+        <targetUrl>info</targetUrl>
+      </retUrl>
+    </Api> 
+    <!-- <Api>
+       2022-11-29暂时不能用,因为ssl证书问题 
+      <apiName>apis_jxcxin_cn</apiName>
+      <apiUrl>https://apis.jxcxin.cn/api/lanzou</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>url</targetUrl>
+      </retUrl>
+    </Api>   -->
   </LzApiInfo>
 </Update>
-
