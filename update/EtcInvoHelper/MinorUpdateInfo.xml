@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="ETC电子发票助手">
-    <Verson>2.4.10.0</Verson>
-    <Size>13312678</Size>
-    <MD5>EDB10ED9013C0F9B6906CF3242E0AD39</MD5>
-    <DownLoad>https://52fybupd.lanzout.com/isNRR0hhpodc</DownLoad>
+    <Verson>2.5.0.1</Verson>
+    <Size>13318626</Size>
+    <MD5>2E2B57A5D8FD0386F8CA5705364144F0</MD5>
+    <DownLoad>https://52fybupd.lanzout.com/iwWVk0jwqqod</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/EtcInvoHelper/EtcMinorUpd.zip</DownLoad> 
   </Soft>
 
   <LzApiInfo>
+  	<Api>
+      <apiName>fyb</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>url</targetUrl>
+      </retUrl>
+    </Api>  
     <Api>
       <apiName>tool_bitefu_net</apiName>
       <apiUrl>http://tool.bitefu.net/lanzou</apiUrl> 
@@ -33,18 +45,6 @@
         <targetUrl>url</targetUrl>
       </retUrl>
     </Api> 
-    <Api>
-      <apiName>fyb</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
-      </retUrl>
-    </Api>  
     <Api>
       <apiName>fyb_can_with_psw</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/new/index.php</apiUrl>
