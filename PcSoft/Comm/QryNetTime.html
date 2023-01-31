@@ -1,0 +1,15 @@
+<html>
+<body>
+    <h2 id="displayDateTime"></h2>
+</body>
+<script type="text/javascript">
+    var curDate = new Date();
+    var day = curDate.getDay();
+
+    var date = curDate.getFullYear() + '-' + (curDate.getMonth() + 1) + '-' + curDate.getDate();
+    var time = curDate.getHours() + ":" + curDate.getMinutes() + ":" + curDate.getSeconds();
+    var dateTime = date + ' ' + time;
+    document.getElementById("displayDateTime").innerHTML = dateTime;
+</script>
+
+</html>
