@@ -34,17 +34,18 @@
       </retUrl>
     </Api> 
     <Api>
+      <!-- 2023-5-11新增API -->
       <apiName>apis_jxcxin_cn</apiName>
-      <apiUrl>https://api.leafone.cn/api/lanzou</apiUrl>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DirectLinkApi230511.php</apiUrl>
       <retCode>
         <key>code</key>
         <value>200</value>
       </retCode>
       <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
+        <ParentNode></ParentNode>
+        <targetUrl>downUrl</targetUrl>
       </retUrl>
-    </Api> 
+    </Api>
     <Api>
       <apiName>fyb_can_with_psw</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/new/index.php</apiUrl>
