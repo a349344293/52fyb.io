@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="飞鱼开票助手(批量开票版)">
-    <Verson>3.9.21.0</Verson>
-    <Size>2182625</Size>
-    <MD5>1F3DA1268CD128CE59DDFAE86E80B552</MD5>
-    <DownLoad>https://52fybupd.lanzout.com/ivPZi0tti9sj</DownLoad>
+    <Verson>3.9.22.0</Verson>
+    <Size>2551423</Size>
+    <MD5>443BA6E065906679F98A204C0CAA69FB</MD5>
+    <DownLoad>https://52fybupd.lanzout.com/i8jPa0vbu4xa</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/InvoImptHelper/BatchImportVar/BivMinorUpd.zip</DownLoad> 
   </Soft>
   
@@ -22,15 +22,15 @@
       </retUrl>
     </Api>  
     <Api>
-      <apiName>tool_bitefu_net</apiName>
-      <apiUrl>http://tool.bitefu.net/lanzou</apiUrl> 
+      <apiName>hanximeng_com</apiName>
+      <apiUrl>https://api.hanximeng.com/lanzou/</apiUrl> 
       <retCode>
-        <key>status</key>
-        <value>1</value>
+        <key>code</key>
+        <value>200</value>
       </retCode>
       <retUrl>
         <ParentNode></ParentNode>
-        <targetUrl>info</targetUrl>
+        <targetUrl>downUrl</targetUrl>
       </retUrl>
     </Api> 
     <Api>
