@@ -7,12 +7,25 @@
     
     <ExeMD5>D762F773713166A947A4ACF45A3C1A23</ExeMD5>
 
-    <DownLoad>https://52fybupd.lanzout.com/iT8Rh150usej</DownLoad>
+<!--     <DownLoad>https://52fybupd.lanzout.com/iT8Rh150usej</DownLoad> -->
     <DownLoad>http://www.52fyb.cn/update/EleInvoAcct/EleInvoAcctProUpd.zip</DownLoad> 
   </Soft>
   
   <LzApiInfo>
-  	<Api>
+    <!-- <Api>
+      <apiName>fyb</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>fileUrl</targetUrl>
+      </retUrl>
+    </Api>   -->
+
+  	<!-- <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
       <retCode>
@@ -23,45 +36,21 @@
         <ParentNode>data</ParentNode>
         <targetUrl>url</targetUrl>
       </retUrl>
-    </Api>  
-    <Api>
-      <apiName>tool_bitefu_net</apiName>
-      <apiUrl>http://tool.bitefu.net/lanzou</apiUrl> 
-      <retCode>
-        <key>status</key>
-        <value>1</value>
-      </retCode>
-      <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>info</targetUrl>
-      </retUrl>
-    </Api> 
-    <Api>
-      <apiName>apis_jxcxin_cn</apiName>
-      <apiUrl>https://api.leafone.cn/api/lanzou</apiUrl>
+    </Api>   -->
+    <!-- <Api>
+      <apiName>52fyb_cn_230511</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DirectLinkApi230511.php</apiUrl>
       <retCode>
         <key>code</key>
         <value>200</value>
       </retCode>
       <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
-      </retUrl>
-    </Api> 
-    <Api>
-      <apiName>fyb_can_with_psw</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/new/index.php</apiUrl>
-      <retCode>
-        <key>status</key>
-        <value>1</value>
-      </retCode>
-      <retUrl>
         <ParentNode></ParentNode>
-        <targetUrl>info</targetUrl>
+        <targetUrl>downUrl</targetUrl>
       </retUrl>
-    </Api> 
+    </Api>  -->
+
     <!-- <Api>
-       2022-11-29暂时不能用,因为ssl证书问题 
       <apiName>apis_jxcxin_cn</apiName>
       <apiUrl>https://apis.jxcxin.cn/api/lanzou</apiUrl>
       <retCode>
@@ -72,6 +61,9 @@
         <ParentNode>data</ParentNode>
         <targetUrl>url</targetUrl>
       </retUrl>
-    </Api>   -->
+    </Api> -->
+
+
   </LzApiInfo>
+  
 </Update>
