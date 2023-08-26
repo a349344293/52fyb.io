@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="ETC电子发票助手">
-    <Verson>2.6.0.0</Verson>
-    <Size>21153723</Size>
-    <MD5>648AC303A072B21473326EB04E1022BF</MD5>
+    <Verson>2.6.1.0</Verson>
+    <Size>21153757</Size>
+    <MD5>431D86FC0F87C37C531F190532612B93</MD5>
     <DownLoad>http://www.52fyb.cn/update/EtcInvoHelper/EtcMinorUpd.zip</DownLoad> 
   </Soft>
 
