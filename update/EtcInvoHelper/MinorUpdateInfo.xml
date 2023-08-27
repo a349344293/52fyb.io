@@ -2,13 +2,25 @@
 <Update>
   <Soft Name="ETC电子发票助手">
     <Verson>3.6.1.0</Verson>
-    <Size>21153881</Size>
-    <MD5>1FD62A78A5386CA7E08875BCB5B83034</MD5>
-     <DownLoad>https://52fybupd.lanzout.com/iaOEG16n97tg</DownLoad>
+    <Size>21153650</Size>
+    <MD5>F4634F08D9B39AA93AE1105AA2A16C3E</MD5>
+     <DownLoad>https://52fybupd.lanzout.com/imlr316nk55g</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/EtcInvoHelper/EtcMinorUpd.zip</DownLoad> 
   </Soft>
 
   <LzApiInfo>
+      <<Api>
+      <apiName>fyb</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>fileUrl</targetUrl>
+      </retUrl>
+    </Api>
     <Api>
       <apiName>dzzui</apiName>
       <apiUrl>https://api.dzzui.com/api/lanzoujx</apiUrl>
@@ -21,19 +33,6 @@
         <targetUrl>info</targetUrl>
       </retUrl>
     </Api>
-    <!-- <Api>
-      <apiName>fyb</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>fileUrl</targetUrl>
-      </retUrl>
-    </Api>   -->
-
   	<!-- <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
