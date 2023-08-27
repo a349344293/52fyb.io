@@ -10,6 +10,18 @@
   </Soft>
 
   <LzApiInfo>
+     <Api>
+      <apiName>fyb</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>fileUrl</targetUrl>
+      </retUrl>
+    </Api>
     <Api>
       <apiName>dzzui</apiName>
       <apiUrl>https://api.dzzui.com/api/lanzoujx</apiUrl>
@@ -22,19 +34,7 @@
         <targetUrl>info</targetUrl>
       </retUrl>
     </Api>
-    <Api>
-      <apiName>fyb</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>fileUrl</targetUrl>
-      </retUrl>
-    </Api>
-
+    
   	<!-- <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
