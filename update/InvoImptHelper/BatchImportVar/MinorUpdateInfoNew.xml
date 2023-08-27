@@ -4,12 +4,12 @@
     <Verson>3.10.6.0</Verson>
     <Size>4696614</Size>
     <MD5>20A6ED8B08BDA45534776AA2C29E7722</MD5>
-<!--     <DownLoad>https://52fybupd.lanzout.com/i0QRY15jv9qh</DownLoad> -->
+    <DownLoad>https://52fybupd.lanzout.com/i0QRY15jv9qh</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/InvoImptHelper/BatchImportVar/BivMinorUpd.zip</DownLoad> 
   </Soft>
 
   <LzApiInfo>
-    <!-- <Api>
+   <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
       <retCode>
@@ -20,7 +20,19 @@
         <ParentNode>data</ParentNode>
         <targetUrl>fileUrl</targetUrl>
       </retUrl>
-    </Api>   -->
+    </Api>
+    <Api>
+      <apiName>dzzui</apiName>
+      <apiUrl>https://api.dzzui.com/api/lanzoujx</apiUrl>
+      <retCode>
+        <key>status</key>
+        <value>1</value>
+      </retCode>
+      <retUrl>
+        <ParentNode></ParentNode>
+        <targetUrl>info</targetUrl>
+      </retUrl>
+    </Api>
 
   	<!-- <Api>
       <apiName>fyb</apiName>
