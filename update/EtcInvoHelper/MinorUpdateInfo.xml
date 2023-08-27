@@ -9,7 +9,7 @@
   </Soft>
 
   <LzApiInfo>
-      <<Api>
+    <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
       <retCode>
