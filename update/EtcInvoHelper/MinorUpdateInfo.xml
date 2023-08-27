@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="ETC电子发票助手">
-    <Verson>2.6.1.0</Verson>
-    <Size>21153757</Size>
-    <MD5>431D86FC0F87C37C531F190532612B93</MD5>
+    <Verson>3.6.1.0</Verson>
+    <Size>21153881</Size>
+    <MD5>1FD62A78A5386CA7E08875BCB5B83034</MD5>
+     <DownLoad>https://52fybupd.lanzout.com/iaOEG16n97tg</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/EtcInvoHelper/EtcMinorUpd.zip</DownLoad> 
   </Soft>
 
   <LzApiInfo>
+    <Api>
+      <apiName>dzzui</apiName>
+      <apiUrl>https://api.dzzui.com/api/lanzoujx</apiUrl>
+      <retCode>
+        <key>status</key>
+        <value>1</value>
+      </retCode>
+      <retUrl>
+        <ParentNode></ParentNode>
+        <targetUrl>info</targetUrl>
+      </retUrl>
+    </Api>
     <!-- <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
