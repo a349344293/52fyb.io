@@ -22,56 +22,19 @@
         <targetUrl>fileUrl</targetUrl>
       </retUrl>
     </Api>
+   
     <Api>
-      <apiName>dzzui</apiName>
-      <apiUrl>https://api.dzzui.com/api/lanzoujx</apiUrl>
+      <apiName>wer</apiName>
+      <apiUrl>https://api.wer.plus/api/lanz</apiUrl>
       <retCode>
-        <key>status</key>
-        <value>1</value>
+        <key>code</key>
+        <value>200</value>
       </retCode>
       <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>info</targetUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>url</targetUrl>
       </retUrl>
     </Api>
-    
-  	<!-- <Api>
-      <apiName>fyb</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
-      </retUrl>
-    </Api>   -->
-    <!-- <Api>
-      <apiName>52fyb_cn_230511</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DirectLinkApi230511.php</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>downUrl</targetUrl>
-      </retUrl>
-    </Api>  -->
-
-    <!-- <Api>
-      <apiName>apis_jxcxin_cn</apiName>
-      <apiUrl>https://apis.jxcxin.cn/api/lanzou</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
-      </retUrl>
-    </Api> -->
 
   </LzApiInfo>
   
