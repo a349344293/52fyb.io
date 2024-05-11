@@ -30,43 +30,20 @@
   </XlsFile>
 
   <LzApiInfo>
-    <Api>
-      <apiName>apis_jxcxin_cn</apiName>
-      <apiUrl>https://api.leafone.cn/api/lanzou</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
-      </retUrl>
-    </Api> 
-    <Api>
-      <apiName>fyb</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink.php</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
-      </retUrl>
-    </Api>  
-    <Api>
-      <apiName>fyb_can_with_psw</apiName>
-      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/new/index.php</apiUrl>
-      <retCode>
-        <key>status</key>
-        <value>1</value>
-      </retCode>
-      <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>info</targetUrl>
-      </retUrl>
-    </Api> 
    <Api>
+      <apiName>wer</apiName>
+      <apiUrl>https://api.wer.plus/api/lanz</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>url</targetUrl>
+      </retUrl>
+    </Api>
+    
+    <Api>
       <apiName>fyb</apiName>
       <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
       <retCode>
