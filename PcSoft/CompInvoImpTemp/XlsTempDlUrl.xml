@@ -31,18 +31,6 @@
 
   <LzApiInfo>
     <Api>
-      <apiName>tool_bitefu_net</apiName>
-      <apiUrl>http://tool.bitefu.net/lanzou</apiUrl> 
-      <retCode>
-        <key>status</key>
-        <value>1</value>
-      </retCode>
-      <retUrl>
-        <ParentNode></ParentNode>
-        <targetUrl>info</targetUrl>
-      </retUrl>
-    </Api> 
-    <Api>
       <apiName>apis_jxcxin_cn</apiName>
       <apiUrl>https://api.leafone.cn/api/lanzou</apiUrl>
       <retCode>
@@ -78,18 +66,17 @@
         <targetUrl>info</targetUrl>
       </retUrl>
     </Api> 
-    <!-- <Api>
-       2022-11-29暂时不能用,因为ssl证书问题 
-      <apiName>apis_jxcxin_cn</apiName>
-      <apiUrl>https://apis.jxcxin.cn/api/lanzou</apiUrl>
+   <Api>
+      <apiName>fyb</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
       <retCode>
         <key>code</key>
         <value>200</value>
       </retCode>
       <retUrl>
         <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
+        <targetUrl>fileUrl</targetUrl>
       </retUrl>
-    </Api>   -->
+    </Api>
   </LzApiInfo>
 </DownLoad>
