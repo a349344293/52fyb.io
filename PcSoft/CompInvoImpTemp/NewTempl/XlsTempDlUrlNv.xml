@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DownLoad>
+  <XlsFile>
+    <Type>通用模板</Type>
+    <Size>116669</Size>
+    <MD5>965499553560C6ADCC39A7ECDDAA2B57</MD5>
+    <Url>https://52fyb.lanzoul.com/iA6Pj21s3b6h</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>建筑服务</Type>
+    <Size>118397</Size>
+    <MD5>A97DBEA387DCFF9CDDD6D08BC5FA863B</MD5>
+    <Url>https://52fyb.lanzoul.com/iSbVy21s3bbc</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>货物运输服务</Type>
+    <Size>270309</Size>
+    <MD5>65D0AC3A0B98074A611A4F39F778641D</MD5>
+    <Url>https://52fyb.lanzoul.com/idQJp21s3bab</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>不动产销售</Type>
+    <Size>232285</Size>
+    <MD5>C7CD4C485E649610B74DC3CCF42B0E1E</MD5>
+    <Url>https://52fyb.lanzoul.com/iCfRj21s3b7i</Url>
+  </XlsFile>
+
+  <LzApiInfo>
+    <Api>
+      <apiName>fyb</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/DriveDirectLink-2023-8-22.php</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>fileUrl</targetUrl>
+      </retUrl>
+    </Api>
+
+    <Api>
+      <apiName>wer</apiName>
+      <apiUrl>https://api.wer.plus/api/lanz</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>url</targetUrl>
+      </retUrl>
+    </Api>
+
+  </LzApiInfo>
+</DownLoad>
