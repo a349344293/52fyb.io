@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <list>
     <fNewNotice>true</fNewNotice>
-    <ver>40.0</ver>
-    <content>注意：部分地区开票软件的税收分类编码版本号已升级！</content>
+    <ver>51.0</ver>
+    <content>注意：部分地区增值税开票软件的税收编码版本号已升级至 51.0 ，请进入增值税开票软件查询编码版本号后及时更新本开票助手上的税收编码版本号！ </content>
+    <TcTabFile>
+        <TcTabVer>48.0</TcTabVer>
+        <Size>1146880</Size>
+        <MD5>ECE56C8BAA698F3B36ECBC6B57523CAB</MD5>
+        <Url>http://www.52fyb.cn/PcSoft/InvoImpHelperSoft/TaxCodeTab/nTctab.du</Url>
+        <Pwd>5jm0</Pwd>
+    </TcTabFile>
+
+    <TempDat>
+        <SLSM_3>3</SLSM_3>
+
+        <!-- 批量导入 -->
+        <SdpTempVerList>pt:20240617</SdpTempVerList>
+        <CompEleInvoTempVer>pt:20240617</CompEleInvoTempVer>
+
+        <!-- 清单明细 -->
+        <SdpQdmxTempVerList>mx;20240605</SdpQdmxTempVerList>
+        <SdpQdmxTempVer>mx;20240605</SdpQdmxTempVer>
+    </TempDat>
 </list>
-
-
