@@ -15,11 +15,11 @@
         <SLSM_3>3</SLSM_3>
 
         <!-- 批量导入 -->
-        <SdpTempVerList>pt:20240617</SdpTempVerList>
-        <CompEleInvoTempVer>pt:20240617</CompEleInvoTempVer>
+        <SdpTempVerList>pt:20240628</SdpTempVerList>
+        <CompEleInvoTempVer>pt:20240628</CompEleInvoTempVer>
 
         <!-- 清单明细 -->
-        <SdpQdmxTempVerList>mx;20240605</SdpQdmxTempVerList>
-        <SdpQdmxTempVer>mx;20240605</SdpQdmxTempVer>
+        <SdpQdmxTempVerList>mx;20240727</SdpQdmxTempVerList>
+        <SdpQdmxTempVer>mx;20240727</SdpQdmxTempVer>
     </TempDat>
 </list>
