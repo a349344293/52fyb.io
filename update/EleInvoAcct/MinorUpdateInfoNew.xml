@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="飞鱼电子发票台账(专业版)">
-    <Verson>4.1.2.2</Verson>
-    <Size>30889142</Size>
-    <MD5>A64C039ABA2475870ACA88AE1F91B9F7</MD5>
-    <DownLoad>https://52fybupd.lanzout.com/icCe22kcdemj</DownLoad>
+    <Verson>4.1.3.0</Verson>
+    <Size>30913748</Size>
+    <MD5>6A2CBE06BD28B873591FBD9767527D56</MD5>
+    <DownLoad>https://52fybupd.lanzout.com/iPxC42n56wkj</DownLoad>
     <DownLoad>https://www.52fyb.site/update/EleInvoAcct/EIAUpdFile.zip</DownLoad>
-    <DownLoad>http://www.52fyb.cn/update/EleInvoAcct/EIAUpdFile.zip</DownLoad>
+    <DownLoad>https://gitee.com/fybsoft/pcsoft/releases/download/V1.2/EIAUpdFile.zip</DownLoad>
   </Soft>
   
   <LzApiInfo>
