@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <list>
     <fNewNotice>true</fNewNotice>
-    <ver>51.0</ver>
-    <content>注意：部分地区增值税开票软件的税收编码版本号已升级至 51.0 ，请进入增值税开票软件查询编码版本号后及时更新本开票助手上的税收编码版本号！ </content>
+    <ver>53.0</ver>
+    <content>注意：部分地区增值税开票软件的税收编码版本号已升级至 53.0 ，请进入增值税开票软件查询编码版本号后及时更新本开票助手上的税收编码版本号！ </content>
     <TcTabFile>
         <TcTabVer>48.0</TcTabVer>
         <Size>1146880</Size>
@@ -25,13 +25,13 @@
     </TempDat>
 
     <GendiginvDll>
-        <Ver>1.1.0.0</Ver>
-        <MD5>5D0D3189F1712F3B2D3A747E8C3145A1</MD5>
-        <Url>https://52fyb.lanzoul.com/i6wgB2tod4jc</Url>
+        <Ver>1.1.2.0</Ver>
+        <MD5>F59466F51FD1C5988679FC3AF33C0B0F</MD5>
+        <Url>https://52fyb.lanzoul.com/ivzAz2vuvaxi</Url>
         <Url>http://www.52fyb.cn/info/InvoImptHelper/DiginvUtil.dll</Url>
-        <Url>https://gitee.com/fybsoft/pcsoft/raw/master/info/InvoImptHelper/DiginvUtil.dll</Url>
+        <Url>https://gitee.com/fybsoft/pcsoft/releases/download/V1.2/DiginvUtil.dll</Url>
+        <Url>http://www.52fyb.site/info/InvoImptHelper/DiginvUtil.dll</Url>
     </GendiginvDll>
-
 
     <LzApiInfo>
         <Api>
@@ -46,32 +46,5 @@
                 <targetUrl>fileUrl</targetUrl>
             </retUrl>
         </Api>
-
-        <Api>
-            <apiName>wer</apiName>
-            <apiUrl>https://api.wer.plus/api/lanz</apiUrl>
-            <retCode>
-                <key>code</key>
-                <value>200</value>
-            </retCode>
-            <retUrl>
-                <ParentNode>data</ParentNode>
-                <targetUrl>url</targetUrl>
-            </retUrl>
-        </Api>
-
-        <Api>
-            <apiName>hanximeng</apiName>
-            <apiUrl>https://api.hanximeng.com/lanzou/</apiUrl>
-            <retCode>
-                <key>code</key>
-                <value>200</value>
-            </retCode>
-            <retUrl>
-                <ParentNode></ParentNode>
-                <targetUrl>downUrl</targetUrl>
-            </retUrl>
-        </Api>
-
     </LzApiInfo>
 </list>
