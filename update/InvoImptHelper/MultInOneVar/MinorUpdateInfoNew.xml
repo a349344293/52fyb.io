@@ -2,9 +2,9 @@
 <Update>
   <Soft Name="飞鱼开票清单助手(多合一版)">
     <SoftName>飞鱼开票清单助手(多合一版)</SoftName>
-    <Verson>4.1.6.0</Verson>
-    <Size>7218094</Size>
-    <MD5>F57633EF5080A1AFCBDF78E5891430AF</MD5>
+    <Verson>4.1.8.0</Verson>
+    <Size>2900681</Size>
+    <MD5>B6EF6F42A581761C208A630CA4920564</MD5>
     <DownLoad>https://52fybupd.lanzout.com/i1ODh2szrc7c</DownLoad>
     <DownLoad>https://www.52fyb.site/update/InvoImptHelper/MultInOneVar/MinorUpd.zip</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/InvoImptHelper/MultInOneVar/MinorUpd.zip</DownLoad> 
@@ -21,19 +21,6 @@
       <retUrl>
         <ParentNode>data</ParentNode>
         <targetUrl>fileUrl</targetUrl>
-      </retUrl>
-    </Api>
-   
-    <Api>
-      <apiName>wer</apiName>
-      <apiUrl>https://api.wer.plus/api/lanz</apiUrl>
-      <retCode>
-        <key>code</key>
-        <value>200</value>
-      </retCode>
-      <retUrl>
-        <ParentNode>data</ParentNode>
-        <targetUrl>url</targetUrl>
       </retUrl>
     </Api>
   </LzApiInfo>
