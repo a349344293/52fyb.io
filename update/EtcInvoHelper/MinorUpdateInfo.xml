@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Update>
   <Soft Name="ETC电子发票助手">
-    <Verson>3.2.5.0</Verson>
-    <Size>15008418</Size>
-    <MD5>302B6C280E8CE7DA6217AB58189F7B2E</MD5>
-    <DownLoad>https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1749044016366/EtcMinorUpd.zip</DownLoad>
-    <DownLoad>https://52fybupd.lanzout.com/iMpVI2y1kryj</DownLoad>
+    <Verson>3.2.6.0</Verson>
+    <Size>15012144</Size>
+    <MD5>5232B106CFF498F0BDE3D9F79EB82911</MD5>
+    <DownLoad>https://52fybupd.lanzout.com/iHZoi2z6bxtc</DownLoad>
     <DownLoad>http://www.52fyb.cn/update/EtcInvoHelper/EtcMinorUpd.zip</DownLoad> 
     <DownLoad>https://52fyb.site/update/EtcInvoHelper/EtcMinorUpd.zip</DownLoad> 
   </Soft>
