@@ -2,11 +2,10 @@
 <Update>
   <Soft Name="飞鱼开票助手(批量开票版)">
     <Verson>4.1.2.0</Verson>
-    <Size>1930094</Size>
-    <MD5>A380644EACD0833AD076ED2AA3CED116</MD5>
-    <DownLoad>https://52fybupd.lanzout.com/ilhUn2qjeewd</DownLoad>
-    <DownLoad>https://www.52fyb.site/update/InvoImptHelper/BatchImportVar/BivMinorUpd.zip</DownLoad>
-    <DownLoad>http://www.52fyb.cn/update/InvoImptHelper/BatchImportVar/BivMinorUpd.zip</DownLoad> 
+    <Size>1930298</Size>
+    <MD5>77A46C8B068E38D9C5A44E6783D33635</MD5>
+    <DownLoad>https://gitee.com/fybsoft/fydwnl/releases/download/V1.0.1/BivMinorUpd.zip</DownLoad>
+    <DownLoad>http://www.52fyb.site/update/InvoImptHelper/BatchImportVar/BivMinorUpd.zip</DownLoad> 
   </Soft>
 
   <LzApiInfo>
