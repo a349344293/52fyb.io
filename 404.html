@@ -11,7 +11,6 @@
     <meta name="renderer" content="webkit">
     <link rel="shortcut icon" type="image/x-icon" href="http://52fyb.site/favicon.ico">
     
-    <!-- 引入现代字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     
     <style>
@@ -23,33 +22,33 @@
 
         body {
             font-family: 'Inter', 'Segoe UI', system-ui, 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #f0f4f9;
-            color: #1e293b;
+            background: #e2e8f0;  /* 全局背景加深，更有质感 */
+            color: #0f172a;
             line-height: 1.5;
         }
 
-        /* 整体容器现代宽屏风格 */
         .modern-wrapper {
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem 1.5rem;
         }
 
-        /* 头部全新设计 */
+        /* 头部区块：更深邃专业 */
         .hero-header {
-            background: linear-gradient(135deg, #0a2b44 0%, #0f3b5c 100%);
+            background: linear-gradient(135deg, #082032 0%, #0a3b4f 70%, #115c6f 100%);
             border-radius: 2rem;
             padding: 2.8rem 2.5rem;
             margin-bottom: 2.5rem;
             color: white;
-            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.3);
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         .hero-header::before {
             content: "✧";
             font-size: 260px;
-            opacity: 0.05;
+            opacity: 0.08;
             position: absolute;
             right: -30px;
             bottom: -80px;
@@ -60,84 +59,91 @@
             font-size: 2.8rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            background: linear-gradient(120deg, #fff, #c3e2ff);
+            background: linear-gradient(120deg, #ffffff, #c3eaff, #9ad0f5);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.1);
             margin-bottom: 0.6rem;
         }
         .project-tagline {
             font-size: 1.2rem;
             font-weight: 500;
-            opacity: 0.92;
+            opacity: 0.95;
             max-width: 85%;
-            border-left: 3px solid #3b82f6;
+            border-left: 3px solid #f0b429;
             padding-left: 1rem;
             margin-top: 0.5rem;
+            color: #fef9e3;
         }
         
-        /* 卡片样式 */
+        /* 卡片区块：底色略深，阴影更明显，边框分明 */
         .card-modern {
             background: #ffffff;
             border-radius: 1.75rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.12);
             padding: 1.8rem 2rem;
             margin-bottom: 2rem;
-            transition: all 0.2s ease;
-            border: 1px solid #e9edf2;
+            transition: all 0.25s ease;
+            border: 1px solid #d4e0ec;
         }
         .card-modern:hover {
-            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
-            border-color: #d0dfee;
+            box-shadow: 0 22px 35px -12px rgba(0, 0, 0, 0.18);
+            border-color: #b9cfdf;
+            transform: translateY(-2px);
         }
         
-        /* 软件分类大标题 */
         .section-badge {
             display: inline-block;
-            background: #eef2ff;
-            color: #1e4b8f;
-            font-weight: 600;
-            padding: 0.25rem 1rem;
+            background: #dfe9f5;
+            color: #155799;
+            font-weight: 700;
+            padding: 0.3rem 1.1rem;
             border-radius: 40px;
             font-size: 0.8rem;
             margin-bottom: 1rem;
             letter-spacing: 0.3px;
+            border: 1px solid #c0d4e8;
         }
         h2 {
             font-size: 1.9rem;
             font-weight: 700;
             margin-bottom: 1.2rem;
-            color: #0f2b3f;
+            color: #0c2b44;
             letter-spacing: -0.3px;
         }
         h3 {
             font-size: 1.45rem;
-            font-weight: 600;
+            font-weight: 700;
             margin: 1.5rem 0 1rem 0;
-            color: #1e3a5f;
+            color: #124263;
             display: inline-block;
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid #f0b429;
             padding-left: 0.9rem;
         }
         
-        /* 产品网格布局（代替原有ul结构）*/
         .products-grid {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1.6rem;
         }
         .product-item {
-            background: #fafcff;
-            border-radius: 1.25rem;
-            border: 1px solid #eef2fa;
+            background: #fefefe;
+            border-radius: 1.35rem;
+            border: 1px solid #e2edf7;
             transition: all 0.2s;
             overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .product-item:hover {
+            border-color: #b9d0e7;
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
         }
         .product-header {
-            background: #ffffff;
+            background: #f3f8fe;  /* 加深头部底色 更清晰 */
             padding: 1rem 1.5rem;
-            border-bottom: 1px solid #edf2f7;
+            border-bottom: 1px solid #e2edf7;
             display: flex;
             align-items: baseline;
             flex-wrap: wrap;
@@ -150,11 +156,12 @@
         }
         .product-version {
             font-size: 0.75rem;
-            background: #e9f3ff;
+            background: #e0ecfa;
             padding: 0.2rem 0.7rem;
             border-radius: 20px;
-            color: #2c6e9e;
-            font-weight: 500;
+            color: #23649e;
+            font-weight: 600;
+            border: 1px solid #c9ddec;
         }
         .product-features {
             padding: 1rem 1.8rem 1.4rem 1.8rem;
@@ -165,39 +172,40 @@
             margin: 0;
         }
         .product-features li {
-            margin: 0.5rem 0;
+            margin: 0.55rem 0;
             font-size: 0.95rem;
-            color: #2c3f55;
-            line-height: 1.45;
+            color: #1e2f44;
+            line-height: 1.48;
         }
         .btn-link {
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            background: #3b82f6;
+            background: #2c6e9e;
             color: white;
-            padding: 0.5rem 1.3rem;
+            padding: 0.5rem 1.4rem;
             border-radius: 60px;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.85rem;
             text-decoration: none;
             transition: 0.2s;
             border: none;
-            box-shadow: 0 2px 5px rgba(59,130,246,0.2);
+            box-shadow: 0 2px 6px rgba(44,110,158,0.25);
         }
         .btn-link:hover {
-            background: #2563eb;
+            background: #1f557d;
             transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(31,85,125,0.2);
         }
         .btn-outline-light {
             background: transparent;
-            border: 1px solid #3b82f6;
-            color: #3b82f6;
+            border: 1px solid #2c6e9e;
+            color: #2c6e9e;
             box-shadow: none;
         }
         .btn-outline-light:hover {
-            background: #eff6ff;
-            color: #1e40af;
+            background: #e6f0f8;
+            color: #124263;
             transform: translateY(-2px);
         }
         .button-group {
@@ -214,24 +222,26 @@
             margin-top: 1rem;
         }
         .qr-card {
-            background: #f8fafc;
+            background: #f1f6fc;
             border-radius: 1.2rem;
             padding: 1rem;
             text-align: center;
-            border: 1px solid #e2edf7;
+            border: 1px solid #c9ddec;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.02);
         }
         .qr-card img {
             border-radius: 1rem;
             max-width: 140px;
             height: auto;
-            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.08);
         }
         .video-container {
-            margin: 1.5rem 0;
+            margin: 1.8rem 0 1rem;
             border-radius: 1.5rem;
             overflow: hidden;
-            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.25);
             background: #000;
+            border: 1px solid #cfdfef;
         }
         video {
             width: 100%;
@@ -243,9 +253,11 @@
             margin-top: 2rem;
             text-align: center;
             padding: 1.5rem;
-            color: #5b6e8c;
-            border-top: 1px solid #e2e8f0;
+            color: #3e5a76;
+            border-top: 1px solid #cbdde9;
             font-size: 0.85rem;
+            background: #f8fafd;
+            border-radius: 1.5rem;
         }
         a {
             text-decoration: none;
@@ -272,25 +284,33 @@
                 align-items: flex-start;
             }
         }
-        /* 保留原有防复制/防右键功能，但增强样式友好 */
+        /* 防选中/防复制保持不变 */
         * {
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
         }
-        /* 允许输入框可选择（但本页面无输入框，保留一致性） */
         body {
             -webkit-touch-callout: none;
         }
         .site-footer a {
-            color: #3b82f6;
+            color: #2266a8;
+            font-weight: 500;
+        }
+        /* 加深列表标记细节 */
+        .product-features li::marker {
+            color: #f0b429;
+            font-weight: bold;
+        }
+        .product-features ol li::marker {
+            color: #2c6e9e;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 <div class="modern-wrapper">
-    <!-- 头部区域：品牌重塑 -->
     <div class="hero-header">
         <h1 class="project-name">飞鱼财税软件</h1>
         <div class="project-tagline">
@@ -298,12 +318,11 @@
         </div>
     </div>
 
-    <!-- 主要内容卡片 -->
     <div class="card-modern">
         <div class="section-badge">✨ 全场景财税工具集</div>
         <h2>飞鱼软件分类</h2>
         <div class="products-grid">
-            <!-- 产品1：开票导入助手 -->
+            <!-- 产品1：开票导入助手（内容未改动） -->
             <div class="product-item">
                 <div class="product-header">
                     <span class="product-name">📄 开票导入助手</span>
@@ -320,7 +339,7 @@
                     </ol>
                 </div>
             </div>
-            <!-- 产品2：电子发票台账 V4.3 -->
+            <!-- 产品2：电子发票台账 V4.3 (内容未改) -->
             <div class="product-item">
                 <div class="product-header">
                     <span class="product-name">📒 电子发票台账</span>
@@ -335,7 +354,7 @@
                     </ol>
                 </div>
             </div>
-            <!-- 产品3：ETC电子发票助手 V3.4 -->
+            <!-- 产品3：ETC电子发票助手 V3.4 （内容未改）-->
             <div class="product-item">
                 <div class="product-header">
                     <span class="product-name">🚗 ETC电子发票助手</span>
@@ -370,8 +389,8 @@
         </div>
     </div>
 
-    <!-- 快速链接区块：软件介绍/下载/联系我们 -->
-    <div class="card-modern">
+    <!-- 快速链接区块 (加深背景与边框) -->
+    <div class="card-modern" style="background: #fefcf5; border-left: 5px solid #f0b429;">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
             <div>
                 <h3 style="margin-top:0;">📌 快捷入口</h3>
@@ -381,13 +400,13 @@
                     <a href="http://www.52fyb.cn/contactus" target="_blank" rel="noopener noreferrer" class="btn-link btn-outline-light">📞 联系我们</a>
                 </div>
             </div>
-            <div style="font-size:0.85rem; background:#F1F5F9; padding:0.5rem 1rem; border-radius:40px;">
+            <div style="font-size:0.85rem; background:#e9f0f5; padding:0.5rem 1rem; border-radius:40px; color:#1a4972; font-weight:500;">
                 ⚡ 所有软件数据本地化处理 · 安全可靠
             </div>
         </div>
     </div>
 
-    <!-- 微信公众号 + 视频演示区 -->
+    <!-- 微信公众号 + 视频演示区 (加深) -->
     <div class="card-modern">
         <h3>📱 飞鱼软件微信公众号</h3>
         <div class="qr-section">
@@ -402,7 +421,6 @@
             </div>
         </div>
         
-        <!-- 视频演示区 -->
         <h3 style="margin-top: 1.8rem;">🎬 功能演示视频</h3>
         <div class="video-container">
             <video autoplay controls loop muted playsinline style="width:100%; max-height:450px; object-fit: cover;">
@@ -410,21 +428,19 @@
                 您的浏览器不支持视频播放。
             </video>
         </div>
-        <p style="font-size: 0.8rem; color:#5b6e8c; margin-top: 0.5rem;">*视频展示飞鱼开票助手软件核心操作流程，直观体验数电票智能编码。</p>
+        <p style="font-size: 0.8rem; color:#3e6a8c; margin-top: 0.5rem; background:#eef2f8; padding:0.2rem 1rem; border-radius:30px; display:inline-block;">*视频展示飞鱼开票助手软件核心操作流程，直观体验数电票智能编码。</p>
     </div>
 
-    <!-- footer 保留统计代码以及防复制增强（已全局禁止选中） -->
     <footer class="site-footer">
-        <span>更多信息请进入飞鱼软件公众号或 <a href="http://www.52fyb.cn" target="_blank" rel="noopener noreferrer" style="color:#2563eb; font-weight:500;">飞鱼官网</a> 查看</span>
+        <span>更多信息请进入飞鱼软件公众号或 <a href="http://www.52fyb.cn" target="_blank" rel="noopener noreferrer" style="color:#2266a8; font-weight:600;">飞鱼官网</a> 查看</span>
         <div style="margin-top: 12px;">
             <span>© 飞鱼软件 | 智能财税助力企业降本增效</span>
         </div>
-        <!-- 统计脚本保留原样 -->
+        <!-- 统计脚本 -->
         <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=KRCw7yI600n3kE4n&ck=KRCw7yI600n3kE4n"></script>
         <script type="text/javascript" src="//js.users.51.la/21603117.js"></script>
         <script>
             (function(){
-                // 保留原字节跳动统计
                 var el = document.createElement("script");
                 el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?6f73abeebf5b0a3d9a26fe9e3d5d0905a88f4ed4ae80152de0c265cb60ce3f68fd9a9dcb5ced4d7780eb6f3bbd089073c2a6d54440560d63862bbf4ec01bba3a";
                 el.id = "ttzz";
@@ -437,15 +453,10 @@
             (function() {
                 document.onkeydown = function(e) {
                     var e = window.event || arguments[0];
-                    // F12
                     if (e.keyCode == 123) { return false; }
-                    // Ctrl+Shift+I
                     else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) { return false; }
-                    // Shift+F10
                     else if ((e.shiftKey) && (e.keyCode == 121)) { return false; }
-                    // Ctrl+U
                     else if ((e.ctrlKey) && (e.keyCode == 85)) { return false; }
-                    // 禁止 Ctrl+C / Ctrl+V / Ctrl+X 复制粘贴剪切
                     if (e.ctrlKey || e.metaKey) {
                         if (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 88 || e.keyCode === 65) {
                             e.preventDefault();
@@ -460,7 +471,6 @@
                     else return true;
                 };
                 document.ondragstart = function() { return false; };
-                // 额外禁止 image 拖拽以及全选
                 document.addEventListener('selectstart', (e) => { e.preventDefault(); return false; });
                 document.addEventListener('copy', (e) => { e.preventDefault(); return false; });
                 document.addEventListener('cut', (e) => { e.preventDefault(); return false; });
