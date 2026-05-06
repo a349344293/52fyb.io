@@ -1,178 +1,472 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
-
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>飞鱼软件-开票导入|电子发票台账|发票批量打印|智能编码|发票查验</title>
-    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>飞鱼软件 - 智能财税助手 | 开票导入 | 电子发票台账 | 发票查验</title>
     <meta name="description"
-        content="飞鱼软件，数电发票批量开票导入,清单明细导入,税收分类编码查询,防止电子发票重复报销|发票查验|发票台账,通行费电子发票批量提取打印,智能编码等专业税票辅助软件" />
-    <meta name="keywords" content="飞鱼开票导入助手,电子发票台账,ETC通行费发票助手,全电发票,发票批量打印,发票查验,财政电子票据查验,飞鱼软件,飞鱼软件官网,税收分类智能编码" />
+        content="飞鱼软件，提供全电发票|数电票|智能编码|航天金税|百旺税控批量开票导入助手，防止电子发票重复报销|发票查验|发票台账，通行费电子发票批量提取打印，智能编码等专业税票辅助软件">
+    <meta name="keywords" content="飞鱼开票导入助手,电子发票台账,ETC通行费发票助手,智能编码,批量赋码,发票批量打印,发票查验,财政电子票据查验,飞鱼软件,飞鱼软件官网,税收分类智能编码">
     <meta name="renderer" content="webkit">
-    <meta name="generator" content="Jekyll v3.9.2" />
-    <meta property="og:title" content="飞鱼软件" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="description" content="飞鱼软件" />
-    <meta property="og:description" content="飞鱼软件" />
-    <link rel="canonical" href="http://52fyb.site/404" />
-    <meta property="og:url" content="http://52fyb.site/404" />
-    <meta property="og:site_name" content="52fyb.io" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="欢迎光临飞鱼财税软件网站" />
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","description":"飞鱼软件","headline":"飞鱼软件主要分为以下几类：","url":"http://52fyb.site/404"}</script>
-    <!-- End Jekyll SEO tag -->
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
-        type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="/assets/css/style.css?v=17386e84b150ec1b3f28ccdd4b3672ebf71c181e">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-    <!-- Setup Google Analytics -->
-
-    <!-- You can set your favicon here -->
     <link rel="shortcut icon" type="image/x-icon" href="http://52fyb.site/favicon.ico">
+    
+    <!-- 引入现代字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- end custom head snippets -->
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f0f4f9;
+            color: #1e293b;
+            line-height: 1.5;
+        }
 
+        /* 整体容器现代宽屏风格 */
+        .modern-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* 头部全新设计 */
+        .hero-header {
+            background: linear-gradient(135deg, #0a2b44 0%, #0f3b5c 100%);
+            border-radius: 2rem;
+            padding: 2.8rem 2.5rem;
+            margin-bottom: 2.5rem;
+            color: white;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-header::before {
+            content: "✧";
+            font-size: 260px;
+            opacity: 0.05;
+            position: absolute;
+            right: -30px;
+            bottom: -80px;
+            pointer-events: none;
+            font-family: monospace;
+        }
+        .project-name {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(120deg, #fff, #c3e2ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 0.6rem;
+        }
+        .project-tagline {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.92;
+            max-width: 85%;
+            border-left: 3px solid #3b82f6;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* 卡片样式 */
+        .card-modern {
+            background: #ffffff;
+            border-radius: 1.75rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.05);
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.2s ease;
+            border: 1px solid #e9edf2;
+        }
+        .card-modern:hover {
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+            border-color: #d0dfee;
+        }
+        
+        /* 软件分类大标题 */
+        .section-badge {
+            display: inline-block;
+            background: #eef2ff;
+            color: #1e4b8f;
+            font-weight: 600;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3px;
+        }
+        h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: #0f2b3f;
+            letter-spacing: -0.3px;
+        }
+        h3 {
+            font-size: 1.45rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+            color: #1e3a5f;
+            display: inline-block;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.9rem;
+        }
+        
+        /* 产品网格布局（代替原有ul结构）*/
+        .products-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .product-item {
+            background: #fafcff;
+            border-radius: 1.25rem;
+            border: 1px solid #eef2fa;
+            transition: all 0.2s;
+            overflow: hidden;
+        }
+        .product-header {
+            background: #ffffff;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #edf2f7;
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .product-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0f3b6f;
+        }
+        .product-version {
+            font-size: 0.75rem;
+            background: #e9f3ff;
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            color: #2c6e9e;
+            font-weight: 500;
+        }
+        .product-features {
+            padding: 1rem 1.8rem 1.4rem 1.8rem;
+            background: #ffffff;
+        }
+        .product-features ol, .product-features ul {
+            padding-left: 1.2rem;
+            margin: 0;
+        }
+        .product-features li {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            color: #2c3f55;
+            line-height: 1.45;
+        }
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #3b82f6;
+            color: white;
+            padding: 0.5rem 1.3rem;
+            border-radius: 60px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: 0.2s;
+            border: none;
+            box-shadow: 0 2px 5px rgba(59,130,246,0.2);
+        }
+        .btn-link:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+        .btn-outline-light {
+            background: transparent;
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+            box-shadow: none;
+        }
+        .btn-outline-light:hover {
+            background: #eff6ff;
+            color: #1e40af;
+            transform: translateY(-2px);
+        }
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .qr-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .qr-card {
+            background: #f8fafc;
+            border-radius: 1.2rem;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #e2edf7;
+        }
+        .qr-card img {
+            border-radius: 1rem;
+            max-width: 140px;
+            height: auto;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+        }
+        .video-container {
+            margin: 1.5rem 0;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.2);
+            background: #000;
+        }
+        video {
+            width: 100%;
+            display: block;
+            border-radius: 1.2rem;
+            outline: none;
+        }
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 1.5rem;
+            color: #5b6e8c;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+        }
+        a {
+            text-decoration: none;
+        }
+        @media (max-width: 720px) {
+            .modern-wrapper {
+                padding: 1rem;
+            }
+            .hero-header {
+                padding: 1.8rem;
+            }
+            .project-name {
+                font-size: 2rem;
+            }
+            .project-tagline {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+            .card-modern {
+                padding: 1.2rem;
+            }
+            .product-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        /* 保留原有防复制/防右键功能，但增强样式友好 */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        /* 允许输入框可选择（但本页面无输入框，保留一致性） */
+        body {
+            -webkit-touch-callout: none;
+        }
+        .site-footer a {
+            color: #3b82f6;
+        }
+    </style>
 </head>
-
 <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
-    <header class="page-header" role="banner">
+<div class="modern-wrapper">
+    <!-- 头部区域：品牌重塑 -->
+    <div class="hero-header">
         <h1 class="project-name">飞鱼财税软件</h1>
-        <h2 class="project-tagline">数电票清单导入|税收分类智能编码|ETC电子发票助手|电子发票台账|发票真伪查验|防止发票重复报销</h2>
-    </header>
+        <div class="project-tagline">
+            数电票清单导入 · 税收分类智能编码 · ETC电子发票助手 · 电子发票台账 · 发票真伪查验 · 防止发票重复报销
+        </div>
+    </div>
 
-        <main id="content" class="main-content" role="main">
-        <h2 id="欢迎光临飞鱼财税软件网站">飞鱼软件分类：</h2>
-        <!--         <p>由于网站升级，软件相关介绍请进入新网站查看 <a href="http://www.52fyb.cn">www.52fyb.cn</a></p> -->
-        <!--         <p>飞鱼软件主要分为增值税开票软件导入助手、电子发票台账（防重报销系统）、增值税发票查验和通行费电子发票批量处理工具（ETC电子发票助手）</p> -->
+    <!-- 主要内容卡片 -->
+    <div class="card-modern">
+        <div class="section-badge">✨ 全场景财税工具集</div>
+        <h2>飞鱼软件分类</h2>
+        <div class="products-grid">
+            <!-- 产品1：开票导入助手 -->
+            <div class="product-item">
+                <div class="product-header">
+                    <span class="product-name">📄 开票导入助手</span>
+                    <span class="product-version">智能赋码版</span>
+                    <a href="http://www.52fyb.cn/invimptools" target="_blank" rel="noopener noreferrer" class="btn-link" style="margin-left:auto;">查看详情 →</a>
+                </div>
+                <div class="product-features">
+                    <ol style="list-style-type:decimal; padding-left:1.2rem;">
+                        <li>多行清单明细，一键赋码，无需手动逐条查询税收分类编码</li>
+                        <li>开具混合税率发票时，自动识别匹配税率</li>
+                        <li>支持高级<a href="http://www.52fyb.cn/fymatchtc.html" target="_blank" rel="noopener noreferrer" style="color:#2563eb; text-decoration:underline;">智能编码</a>功能</li>
+                        <li>直接生成电子税务局支持的明细导入文件，无需手动整理，一键导入，批量开票</li>
+                        <li>PC版软件，所有数据本地处理，杜绝上传任何数据到后台，避免财务敏感数据外泄。</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- 产品2：电子发票台账 V4.3 -->
+            <div class="product-item">
+                <div class="product-header">
+                    <span class="product-name">📒 电子发票台账</span>
+                    <span class="product-version">真伪查验 防重报销</span>
+                    <a href="http://www.52fyb.cn/invacct" target="_blank" rel="noopener noreferrer" class="btn-link" style="margin-left:auto;">查看详情 →</a>
+                </div>
+                <div class="product-features">
+                    <ol>
+                        <li>官网版本不低于V4.4；杜绝电子发票重复报销入账；</li>
+                        <li>增值税发票真伪快速查验；电子发票文件存档管理</li>
+                        <li>支持增值税全系列票种、数电票、区块链发票、地方通用发票和财政电子票据；</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- 产品3：ETC电子发票助手 V3.4 -->
+            <div class="product-item">
+                <div class="product-header">
+                    <span class="product-name">🚗 ETC电子发票助手</span>
+                    <span class="product-version">发票批量下载、批量分拣、批量整理导出Excel、批量打印</span>
+                    <a href="http://www.52fyb.cn/etcutil.html" target="_blank" rel="noopener noreferrer" class="btn-link" style="margin-left:auto;">查看详情 →</a>
+                </div>
+                <div class="product-features">
+                    <ol>
+                        <li>V3.4版本起支持ETC数电票；批量汇总通行费电子发票内容，生成Excel报表（含分车辆汇总数据）；</li>
+                        <li>批量自动挑选征税税率发票和不征税税率发票文件；批量自动挑选销项负数发票（红冲发票）文件；</li>
+                        <li>批量打印通行费电子发票，支持多种页面布局，节省纸张，一键设定批量自动打印；</li>
+                        <li>批量合并通行费发票文件，便于文件存档；</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- 产品4：电子发票批量打印助手 -->
+            <div class="product-item">
+                <div class="product-header">
+                    <span class="product-name">🖨️ 电子发票批量打印助手</span>
+                    <span class="product-version">高效打印版</span>
+                    <a href="https://mp.weixin.qq.com/s/B4_wVsFhZWNaew9kWY2dRQ" target="_blank" rel="noopener noreferrer" class="btn-link" style="margin-left:auto;">查看详情 →</a>
+                </div>
+                <div class="product-features">
+                    <ol>
+                        <li>支持A5纸张批量打印；支持一页A4纸张打印多张发票；</li>
+                        <li>批量打印时支持销货清单同步打印，自动排版；</li>
+                        <li>电脑无需安装PDF和OFD阅读器，无需人工打开发票文件；</li>
+                        <li>根据打印机状态自动控制发票文件进度，避免打印机故障时打印失败；</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <ul>
-            <li><a href="http://www.52fyb.cn/invimptools" title="打开详情" target="_blank" rel="noreferrer noopener">开票导入助手</a></li>
-            <ol>
-                <li>多行清单明细，一键赋码，无需手动逐条查询税收分类编码</li>
-                <li>开具混合税率发票时，自动识别匹配税率</li>
-                <li>支持高级<a href="http://www.52fyb.cn/fymatchtc.html" title="打开详情" target="_blank" rel="noreferrer noopener">智能编码</a>功能</li>
-                <li>直接生成电子税务局支持的明细导入文件，无需手动整理，一键导入，批量开票</li>
-                <li>PC版软件，所有数据本地处理，杜绝上传任何数据到后台，避免财务敏感数据外泄。</li>
-            </ol>
-            <li><a href="http://www.52fyb.cn/invacct" title="打开详情" target="_blank" rel="noreferrer noopener">电子发票台账（V4.3版本）</a></li>
-            <ol>
-                <li>官网版本不低于V4.3；</li>
-                <li>杜绝电子发票重复报销入账；</li>
-                <li>增值税发票真伪快速查验；</li>
-                <li>电子发票文件存档管理</li>
-                <li>支持增值税全系列票种、数电票、区块链发票、地方通用发票和财政电子票据；</li>
-            </ol>
-            <li><a href="http://www.52fyb.cn/etcutil.html" title="打开详情" target="_blank" rel="noreferrer noopener">ETC电子发票助手（V3.4版本）</a></li>
-            <ol>
-                <li>V3.4版本起支持ETC数电票；</li>
-                <li>批量汇总通行费电子发票内容，生成Excel报表（含分车辆汇总数据）；</li>
-                <li>批量自动挑选征税税率发票和不征税税率发票文件；</li>
-                <li>批量自动挑选销项负数发票（红冲发票）文件；</li>
-                <li>批量打印通行费电子发票，支持多种页面布局，节省纸张，一键设定批量自动打印；</li>
-                <li>批量合并通行费发票文件，便于文件存档；</li>
-            </ol>
-            <li><a href="https://mp.weixin.qq.com/s/B4_wVsFhZWNaew9kWY2dRQ" title="打开详情" target="_blank" rel="noreferrer noopener">电子发票批量打印助手</a></li>
-            <ol>
-                <li>支持A5纸张批量打印；</li>
-                <li>支持一页A4纸张打印多张发票；</li>
-                <li>批量打印时支持销货清单同步打印，自动排版；</li>
-                <li>电脑无需安装PDF和OFD阅读器，无需人工打开发票文件；</li>
-                <li>根据打印机状态自动控制发票文件进度，避免打印机故障时打印失败；</li>
-            </ol>
-        </ul>
+    <!-- 快速链接区块：软件介绍/下载/联系我们 -->
+    <div class="card-modern">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+            <div>
+                <h3 style="margin-top:0;">📌 快捷入口</h3>
+                <div class="button-group">
+                    <a href="http://www.52fyb.cn/softlist" target="_blank" rel="noopener noreferrer" class="btn-link">📖 软件介绍</a>
+                    <a href="http://www.52fyb.cn/softlist" target="_blank" rel="noopener noreferrer" class="btn-link">⬇️ 软件下载</a>
+                    <a href="http://www.52fyb.cn/contactus" target="_blank" rel="noopener noreferrer" class="btn-link btn-outline-light">📞 联系我们</a>
+                </div>
+            </div>
+            <div style="font-size:0.85rem; background:#F1F5F9; padding:0.5rem 1rem; border-radius:40px;">
+                ⚡ 所有软件数据本地化处理 · 安全可靠
+            </div>
+        </div>
+    </div>
 
-        <h3 id="软件介绍">软件介绍</h3>
-        <p>
-            <a style="border-radius: 5px; color: #fff; background-color: #32a5e7; border: 2px solid #32a5e7; text-indent: 0; padding: 8px 25px 9px;"
-                href="http://www.52fyb.cn/softlist" target="_blank" rel="noopener noreferrer">点击查看</a>
-        </p>
+    <!-- 微信公众号 + 视频演示区 -->
+    <div class="card-modern">
+        <h3>📱 飞鱼软件微信公众号</h3>
+        <div class="qr-section">
+            <div class="qr-card">
+                <img src="https://52fyb.site/pic/fygzhqrcode.jpg" width="150" alt="飞鱼软件公众号" title="飞鱼软件微信公众号">
+                <p style="margin-top: 8px; font-weight:500;">扫码关注</p>
+                <small style="color:#5b6e8c;">获取教程 & 最新软件下载</small>
+            </div>
+            <div style="flex:1;">
+                <p>进入飞鱼软件微信公众号查看更多联系方式、软件操作教程和最新版本软件下载，实时获取版本更新通知。</p>
+                <p style="margin-top: 0.5rem;">✦ 软件服务支持 ✦ 软件操作指南 ✦ 升级指南</p>
+            </div>
+        </div>
+        
+        <!-- 视频演示区 -->
+        <h3 style="margin-top: 1.8rem;">🎬 功能演示视频</h3>
+        <div class="video-container">
+            <video autoplay controls loop muted playsinline style="width:100%; max-height:450px; object-fit: cover;">
+                <source src="https://v2.sohu.com/v/url/632043700_120419283.MP4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+        </div>
+        <p style="font-size: 0.8rem; color:#5b6e8c; margin-top: 0.5rem;">*视频展示飞鱼开票助手软件核心操作流程，直观体验数电票智能编码。</p>
+    </div>
 
-        <h3 id="软件下载">软件下载</h3>
-        <p>
-            <a style="border-radius: 5px; color: #fff; background-color: #32a5e7; border: 2px solid #32a5e7; text-indent: 0; padding: 8px 25px 9px;"
-                href="http://www.52fyb.cn/softlist" target="_blank" rel="noopener noreferrer">进入下载</a>
-        </p>
+    <!-- footer 保留统计代码以及防复制增强（已全局禁止选中） -->
+    <footer class="site-footer">
+        <span>更多信息请进入飞鱼软件公众号或 <a href="http://www.52fyb.cn" target="_blank" rel="noopener noreferrer" style="color:#2563eb; font-weight:500;">飞鱼官网</a> 查看</span>
+        <div style="margin-top: 12px;">
+            <span>© 飞鱼软件 | 智能财税助力企业降本增效</span>
+        </div>
+        <!-- 统计脚本保留原样 -->
+        <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=KRCw7yI600n3kE4n&ck=KRCw7yI600n3kE4n"></script>
+        <script type="text/javascript" src="//js.users.51.la/21603117.js"></script>
+        <script>
+            (function(){
+                // 保留原字节跳动统计
+                var el = document.createElement("script");
+                el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?6f73abeebf5b0a3d9a26fe9e3d5d0905a88f4ed4ae80152de0c265cb60ce3f68fd9a9dcb5ced4d7780eb6f3bbd089073c2a6d54440560d63862bbf4ec01bba3a";
+                el.id = "ttzz";
+                var s = document.getElementsByTagName("script")[0];
+                if(s && s.parentNode) s.parentNode.insertBefore(el, s);
+            })();
+        </script>
 
-        <h3 id="联系我们">联系我们</h3>
-        <p>
-            <a style="border-radius: 5px; color: #fff; background-color: #32a5e7; border: 2px solid #32a5e7; text-indent: 0; padding: 8px 25px 9px;"
-                href="http://www.52fyb.cn/contactus" target="_blank"
-                rel="noopener noreferrer">点击查看</a>
-        </p>
-
-        <h3 id="飞鱼软件微信公众号">飞鱼软件微信公众号</h3>
-        <p><img src="https://52fyb.site/pic/fyWxgzh_sml.jpg" width=500 alt="飞鱼软件公众号"
-                title="飞鱼软件微信公众号" /></p>
-        <p> 进入飞鱼软件微信公众号查看更多联系方式和软件操作教程</p>
-
-
-        <figure class="wp-block-video"><video autoplay controls loop muted src="https://v2.sohu.com/v/url/632043700_120419283.MP4" playsinline></video></figure>
-
-        <footer class="site-footer">
-            <span class="site-footer-credits">更多信息请进入飞鱼软件公众号或 <a href="http://www.52fyb.cn">飞鱼网站</a>查看</span>
-            <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=KRCw7yI600n3kE4n&ck=KRCw7yI600n3kE4n"></script>
-
-            <script>
-                (function () {
-                    var el = document.createElement("script");
-                    el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?6f73abeebf5b0a3d9a26fe9e3d5d0905a88f4ed4ae80152de0c265cb60ce3f68fd9a9dcb5ced4d7780eb6f3bbd089073c2a6d54440560d63862bbf4ec01bba3a";
-                    el.id = "ttzz";
-                    var s = document.getElementsByTagName("script")[0];
-                    s.parentNode.insertBefore(el, s);
-                })(window)
-            </script>
-
-            <script type="text/javascript">
-                //代码收集自网络
-                window.onload = function () {
-                    //屏蔽键盘事件
-                    document.onkeydown = function () {
-                        var e = window.event || arguments[0];
-                        //F12
-                        if (e.keyCode == 123) {
-                            return false;
-                            //Ctrl+Shift+I
-                        } else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) {
-                            return false;
-                            //Shift+F10
-                        } else if ((e.shiftKey) && (e.keyCode == 121)) {
-                            return false;
-                            //Ctrl+U
-                        } else if ((e.ctrlKey) && (e.keyCode == 85)) {
+        <script>
+            (function() {
+                document.onkeydown = function(e) {
+                    var e = window.event || arguments[0];
+                    // F12
+                    if (e.keyCode == 123) { return false; }
+                    // Ctrl+Shift+I
+                    else if ((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)) { return false; }
+                    // Shift+F10
+                    else if ((e.shiftKey) && (e.keyCode == 121)) { return false; }
+                    // Ctrl+U
+                    else if ((e.ctrlKey) && (e.keyCode == 85)) { return false; }
+                    // 禁止 Ctrl+C / Ctrl+V / Ctrl+X 复制粘贴剪切
+                    if (e.ctrlKey || e.metaKey) {
+                        if (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 88 || e.keyCode === 65) {
+                            e.preventDefault();
                             return false;
                         }
-                    };
-                    //屏蔽鼠标右键
-                    document.oncontextmenu = function () {
-                        return false;
-                    };
-                    // 禁止选择文本
-                    document.onselectstart = function () {
-                        if (event.srcElement.type != "text" && event.srcElement.type != "textarea" && event.srcElement.type != "password") return false;
-                        else return true;
-                    };
-                    // 禁止图片拖放
-                    document.ondragstart = function () {
-                        return false
-                    };
-                }
-            </script>
-            
-            <script type="text/javascript" src="//js.users.51.la/21603117.js"></script>
-        </footer>
-    </main>
+                    }
+                    return true;
+                };
+                document.oncontextmenu = function() { return false; };
+                document.onselectstart = function() {
+                    if (event.srcElement && (event.srcElement.type != "text" && event.srcElement.type != "textarea" && event.srcElement.type != "password")) return false;
+                    else return true;
+                };
+                document.ondragstart = function() { return false; };
+                // 额外禁止 image 拖拽以及全选
+                document.addEventListener('selectstart', (e) => { e.preventDefault(); return false; });
+                document.addEventListener('copy', (e) => { e.preventDefault(); return false; });
+                document.addEventListener('cut', (e) => { e.preventDefault(); return false; });
+            })();
+        </script>
+    </footer>
+</div>
 </body>
-
 </html>

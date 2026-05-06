@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>飞鱼电子发票台账 | 专业级发票管理工具</title>
+    <!-- 优雅字体 Inter & 思源黑体备用 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;   /* Chrome/Safari/WebKit */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* IE/Edge 老版本 */
+            user-select: none;           /* 标准语法 */
+        }
+
+        img, svg {
+            -webkit-user-drag: none;
+            user-drag: none;
+            pointer-events: auto;
+        }
+
+        body {
+            background: linear-gradient(145deg, #eef2f7 0%, #e0e8f0 100%);
+            padding: 48px 24px;
+            font-family: 'Inter', 'Segoe UI', system-ui, 'Microsoft YaHei', sans-serif;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 主卡片容器 – 现代感设计 */
+        .wiki-card {
+            max-width: 1120px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 40px;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25), 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* 装饰头部渐变条 */
+        .hero-accent {
+            height: 6px;
+            background: linear-gradient(90deg, #0f6bff, #6bc5ff, #2b9eff, #0a5dc2);
+        }
+
+        /* 内边距区域 */
+        .wiki-content {
+            padding: 40px 44px 56px;
+        }
+
+        /* 标题 + 副标题区域 */
+        .title-section {
+            margin-bottom: 28px;
+        }
+        
+        /* 标题链接样式 */
+        .clickable-title-link {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+        .clickable-title-link:hover {
+            opacity: 0.85;
+        }
+        .clickable-title-link:active {
+            transform: scale(0.99);
+        }
+        
+        .wiki-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1F2A44, #0f2b4f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0;
+            display: inline-block;
+            position: relative;
+            transition: all 0.2s;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #EFF6FF;
+            color: #1e6fdf;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 40px;
+            margin-left: 16px;
+            vertical-align: middle;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(30, 111, 223, 0.2);
+            pointer-events: none; 
+        }
+        
+        .wiki-desc {
+            font-size: 1.05rem;
+            line-height: 1.65;
+            color: #2c3e4e;
+            background: #F8FAFE;
+            padding: 20px 24px;
+            border-radius: 28px;
+            margin: 20px 0 12px 0;
+            border: 1px solid #eef2f9;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            font-weight: 450;
+        }
+
+        /* 章节样式 - 更现代 */
+        .section {
+            margin-top: 40px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 12px;
+        }
+        .section-icon {
+            font-size: 1.8rem;
+        }
+        .section-title {
+            font-size: 1.65rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #1a2c3e;
+            margin: 0;
+        }
+
+        /* 功能网格布局 – 代替传统列表，更美观易读 */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .feature-item {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 16px 20px 16px 20px;
+            transition: all 0.25s;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            border: 1px solid #eef2f8;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .feature-item:hover {
+            border-color: #cbdde9;
+            background: #FDFEFF;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 20px -12px rgba(0, 80, 150, 0.12);
+        }
+        .feature-icon {
+            font-size: 1.5rem;
+            min-width: 32px;
+            text-align: center;
+            color: #2b7be4;
+        }
+        .feature-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #1a2f3f;
+            line-height: 1.45;
+        }
+        .feature-text strong {
+            font-weight: 700;
+            color: #0a4b8a;
+        }
+
+        .highlight-note {
+            margin-top: 44px;
+            background: linear-gradient(115deg, #F0F7FF 0%, #E9F2FA 100%);
+            border-radius: 28px;
+            padding: 24px 32px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            border: 1px solid rgba(15, 107, 255, 0.25);
+            box-shadow: 0 6px 14px rgba(0, 30, 60, 0.05);
+        }
+        .note-text {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .shield-icon {
+            font-size: 2.6rem;
+        }
+        .note-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #104c77;
+        }
+        .note-desc {
+            color: #2c5270;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .upgrade-tag {
+            background: #ffffffcc;
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1e6fdf;
+            border: 1px solid #ffffff;
+        }
+
+        .footer-meta {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9edf2;
+            font-size: 0.75rem;
+            text-align: center;
+            color: #6c86a3;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .footer-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .clickable-hint {
+            font-size: 0.7rem;
+            margin-left: 12px;
+            color: #5f8bb3;
+            background: #eef3fc;
+            padding: 2px 10px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            vertical-align: middle;
+            pointer-events: none;
+        }
+
+        @media (max-width: 750px) {
+            body {
+                padding: 24px 16px;
+            }
+            .wiki-content {
+                padding: 28px 20px 40px;
+            }
+            .wiki-title {
+                font-size: 1.9rem;
+            }
+            .badge {
+                margin-left: 8px;
+                font-size: 0.7rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .highlight-note {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .clickable-hint {
+                font-size: 0.6rem;
+                margin-left: 6px;
+            }
+        }
+        
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            -webkit-touch-callout: none; 
+        }
+    </style>
+</head>
+<body>
+<div class="wiki-card">
+    <div class="hero-accent"></div>
+    <div class="wiki-content">
+        <div class="title-section">
+            <div class="clickable-title-wrapper">
+                <a href="http://www.52fyb.cn/softlist" class="clickable-title-link" target="_blank" rel="noopener noreferrer" id="dynamicLink">
+                    <h1 class="wiki-title">飞鱼电子发票台账</h1>
+                </a>
+                <span class="badge">专业版 · 安全可靠</span>
+                <span class="clickable-hint">🔗 点击标题进入软件下载页面</span>
+            </div>
+            <div class="wiki-desc">
+                🧾 飞鱼电子发票台账是一款专为财务场景打造的PC端发票报销入账管理工具，集扫码枪录入、微信小程序采集、批量读取发票文件于一体。
+                无缝实现发票真伪查验、重复报销校验与电子发票归档全流程。兼容增值税全系列发票（含数电发票）、区块链发票及通用机打发票，
+                支持进项发票与销货清单一键导出 Excel格式，助财务人员高效驾驭票据管理，释放繁琐工作压力。
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-icon">⚡</span>
+                <h2 class="section-title">核心功能矩阵</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item"><div class="feature-icon">📑</div><div class="feature-text">支持增值税全系列发票<strong>(含数电票)</strong>、区块链发票、地方通用发票及财政非税收入票据等</div></div>
+                <div class="feature-item"><div class="feature-icon">📥</div><div class="feature-text">手工录入、扫码录入、读取发票文件、Excel导入等多种方式快速录入</div></div>
+                <div class="feature-item"><div class="feature-icon">📂</div><div class="feature-text">批量读取电子发票文件，自动识别票面全部内容，零手动填写</div></div>
+                <div class="feature-item"><div class="feature-icon">🔍</div><div class="feature-text">增值税发票+区块链发票<strong>真伪查验</strong>，免人工填写发票信息，自动返回查验结果</div></div>
+                <div class="feature-item"><div class="feature-icon">🧾</div><div class="feature-text">保存发票真伪查验结果 & 发票销货清单<strong>批量导出</strong>，支持结构化整理</div></div>
+                <div class="feature-item"><div class="feature-icon">🔄</div><div class="feature-text">自动比对<strong>查重引擎</strong>，彻底杜绝重复报销入账风险</div></div>
+                <div class="feature-item"><div class="feature-icon">📎</div><div class="feature-text">电子发票辅助存档管理 (PDF、OFD、XML 等格式) 智能分类归档</div></div>
+                <div class="feature-item"><div class="feature-icon">📊</div><div class="feature-text">历史登记记录查询、报销数据统计、一键Excel报表导出</div></div>
+                <div class="feature-item"><div class="feature-icon">👥</div><div class="feature-text"><strong>多用户操作 + 精细化权限管理</strong>，满足企业内控需求</div></div>
+                <div class="feature-item"><div class="feature-icon">🌐</div><div class="feature-text">局域网内多机互联、共享数据模式，团队协作无缝高效</div></div>
+                <div class="feature-item"><div class="feature-icon">🔒</div><div class="feature-text"><strong>数据本地化存储</strong>，零数据上传云端，彻底杜绝泄露风险，极致安全</div></div>
+                <div class="feature-item"><div class="feature-icon">🔄</div><div class="feature-text">软件支持自动迭代升级，享受最新功能与优化</div></div>
+            </div>
+        </div>
+
+        <div class="highlight-note">
+            <div class="note-text">
+                <div class="shield-icon">🛡️🔐</div>
+                <div>
+                    <div class="note-title">本地化 · 私有部署级安全</div>
+                    <div class="note-desc">所有发票数据、台账记录均存储于本地设备或企业内网，未经授权绝不外传。同时支持自动备份与多机加密互联，让财务数据固若金汤。</div>
+                </div>
+            </div>
+            <div class="upgrade-tag">✨ 自动升级 | 永久掌控数据</div>
+        </div>
+        <div class="footer-meta">
+            <span>📌 支持增值税全系列发票、区块链发票、非税票据等多种票据 ✨</span>
+            <span>⚙️ 扫码枪 / 微信扫码便捷录入</span>
+            <span>🧠 快捷真伪查验 杜绝假票入账</span>
+            <span>📎 电子发票辅助存档管理</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        const CUSTOM_REDIRECT_URL = "http://www.52fyb.cn/softlist";  
+        const TARGET_ATTR = "_blank";   
+        const titleLink = document.getElementById('dynamicLink');
+        if (titleLink) {
+            titleLink.setAttribute('href', CUSTOM_REDIRECT_URL);
+            titleLink.setAttribute('target', TARGET_ATTR);
+            if (TARGET_ATTR === "_blank") {
+                titleLink.setAttribute('rel', 'noopener noreferrer');
+            }
+        } else {
+            const fallbackLink = document.querySelector('.clickable-title-link');
+            if (fallbackLink) {
+                fallbackLink.setAttribute('href', CUSTOM_REDIRECT_URL);
+                fallbackLink.setAttribute('target', TARGET_ATTR);
+                if (TARGET_ATTR === "_blank") fallbackLink.setAttribute('rel', 'noopener noreferrer');
+            }
+        }
+        
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+ 
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+
+        document.addEventListener('keydown', function(e) {
+            const ctrlOrCmd = e.ctrlKey || e.metaKey;
+            if (ctrlOrCmd) {
+                if (e.key === 'c' || e.key === 'C' || 
+                    e.key === 'v' || e.key === 'V' || 
+                    e.key === 'x' || e.key === 'X' ||
+                    e.key === 'a' || e.key === 'A') {
+                    e.preventDefault();
+                    return false;
+                }
+            }
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        document.addEventListener('touchstart', function(e) {
+        });
+        
+    })();
+</script>
+
+
+</body>
+</html>
