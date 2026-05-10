@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>飞鱼开票助手 | 智能赋码 · 批量开票 · 合规高效</title>
+    <!-- 预连 Google Fonts 加快加载 (备用) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 干净背景，优雅自适应 */
+        body {
+            background: #f8fafc;
+            padding: 32px 20px;
+            font-family: 'Inter', 'Segoe UI', system-ui, 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* 最大宽度容器，居中显示，呼吸感 */
+        .fish-invoice-block {
+            max-width: 1280px;
+            margin: 0 auto;
+            font-family: 'Inter', 'Segoe UI', system-ui, 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1e293b;
+            line-height: 1.5;
+        }
+
+        /* 描述区块样式 */
+        .fish-wiki-desc {
+            font-size: 1.05rem;
+            line-height: 1.65;
+            color: #1e405b;
+            background: linear-gradient(115deg, #F0F7FF 0%, #E9F2FA 100%);
+            padding: 20px 24px;
+            border-radius: 28px;
+            margin: 0 0 20px 0;
+            border: 1px solid rgba(15, 107, 255, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 30, 60, 0.05);
+            font-weight: 460;
+        }
+
+        /* 功能矩阵区块 */
+        .fish-section {
+            margin-top: 32px;
+        }
+        .fish-section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e2edf7;
+            padding-bottom: 12px;
+        }
+        .fish-section-icon {
+            font-size: 1.8rem;
+        }
+        .fish-section-title {
+            font-size: 1.65rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #1a3b4f;
+            margin: 0;
+        }
+
+        /* 功能网格 */
+        .fish-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .fish-feature-item {
+            background: linear-gradient(115deg, #F0F7FF 0%, #EBF3FC 100%);
+            border-radius: 24px;
+            padding: 16px 20px 16px 20px;
+            transition: all 0.25s;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            border: 1px solid rgba(15, 107, 255, 0.2);
+            box-shadow: 0 2px 6px rgba(0, 20, 40, 0.03);
+        }
+        .fish-feature-item:hover {
+            border-color: #5b9eff;
+            background: linear-gradient(115deg, #ecf5ff 0%, #e5eff9 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 22px -12px rgba(0, 80, 150, 0.18);
+        }
+        .fish-feature-icon {
+            font-size: 1.5rem;
+            min-width: 32px;
+            text-align: center;
+            color: #2b7be4;
+        }
+        .fish-feature-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #1a364b;
+            line-height: 1.45;
+        }
+        .fish-feature-text strong {
+            font-weight: 700;
+            color: #0a4b8a;
+        }
+
+        /* 效率飙升亮点区块 */
+        .fish-highlight-card {
+            background: linear-gradient(115deg, #F0F7FF 0%, #E9F2FA 100%);
+            border-radius: 28px;
+            padding: 24px 28px;
+            margin: 24px 0 20px 0;
+            border: 1px solid rgba(15, 107, 255, 0.25);
+            box-shadow: 0 6px 14px rgba(0, 30, 60, 0.05);
+        }
+        .fish-highlight-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #104c77;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .fish-highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 14px;
+        }
+        .fish-highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #1a364b;
+            padding: 6px 0;
+        }
+        .fish-highlight-icon {
+            font-size: 1.3rem;
+            min-width: 28px;
+            color: #2b7be4;
+        }
+
+        /* 本地化安全专属卡片（单独突出） */
+        .fish-security-card {
+            background: linear-gradient(115deg, #E8F1FF 0%, #DFEAF8 100%);
+            border-radius: 28px;
+            padding: 20px 28px;
+            margin: 20px 0 20px 0;
+            border: 1px solid rgba(15, 107, 255, 0.35);
+            box-shadow: 0 8px 18px rgba(0, 30, 60, 0.08);
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+        .fish-security-icon {
+            font-size: 2.8rem;
+        }
+        .fish-security-content {
+            flex: 1;
+        }
+        .fish-security-title {
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: #0a4b7a;
+            margin: 0 0 6px 0;
+        }
+        .fish-security-desc {
+            color: #1e5275;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.5;
+        }
+        .fish-security-badge {
+            background: #ffffffdd;
+            backdrop-filter: blur(4px);
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #1e6fdf;
+            border: 1px solid #ffffff;
+            white-space: nowrap;
+        }
+
+        /* 安心开票区域 */
+        .fish-safety-card {
+            background: linear-gradient(115deg, #F0F7FF 0%, #E9F2FA 100%);
+            border-radius: 28px;
+            padding: 22px 28px;
+            margin: 20px 0 24px 0;
+            border: 1px solid rgba(15, 107, 255, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .fish-safety-text {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .fish-safety-icon {
+            font-size: 2.2rem;
+        }
+        .fish-safety-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #104c77;
+            margin: 0 0 4px 0;
+        }
+        .fish-safety-desc {
+            color: #2c5270;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin: 0;
+        }
+        .fish-safety-badge {
+            background: #ffffffcc;
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #1e6fdf;
+            border: 1px solid #ffffff;
+            white-space: nowrap;
+        }
+
+        /* 视频模块 */
+        .fish-video-section {
+            margin: 32px 0 20px 0;
+            border-radius: 28px;
+            overflow: hidden;
+            background: linear-gradient(115deg, #F0F7FF 0%, #E9F2FA 100%);
+            border: 1px solid rgba(15, 107, 255, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 30, 60, 0.08);
+        }
+        .fish-video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+        }
+        .fish-video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .fish-video-caption {
+            text-align: center;
+            padding: 14px 20px;
+            font-size: 0.85rem;
+            color: #2c5270;
+            font-weight: 500;
+            background: rgba(255,255,255,0.4);
+            border-top: 1px solid rgba(15, 107, 255, 0.1);
+        }
+
+        /* 软件下载模块 - 蓝色按钮强覆盖 */
+        .fish-download-card {
+            background: linear-gradient(115deg, #FDF8F0 0%, #FEF5E8 100%);
+            border-radius: 28px;
+            padding: 28px 32px;
+            margin: 24px 0 20px 0;
+            border: 1px solid rgba(255, 150, 50, 0.25);
+            box-shadow: 0 8px 20px rgba(0, 30, 60, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .fish-download-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .fish-download-icon {
+            font-size: 3rem;
+        }
+        .fish-download-text h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #b45f1b;
+            margin: 0 0 8px 0;
+        }
+        .fish-download-text p {
+            color: #7a561e;
+            font-size: 0.9rem;
+            margin: 0;
+            font-weight: 500;
+        }
+        .fish-download-version {
+            font-size: 0.7rem;
+            color: #c6862e;
+            margin-top: 6px;
+            font-weight: 500;
+        }
+
+        /* 极致强硬按钮样式 - 确保蓝底白字，提升全局权重 */
+        .fish-download-card .fish-download-btn,
+        .fish-download-btn,
+        a.fish-download-btn,
+        .fish-invoice-block .fish-download-btn {
+            background: linear-gradient(135deg, #1e6fdf 0%, #0a5bcc 100%) !important;
+            border: none !important;
+            padding: 14px 36px !important;
+            border-radius: 60px !important;
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            color: #ffffff !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 12px rgba(30, 111, 223, 0.3) !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            font-family: inherit !important;
+            line-height: 1.2 !important;
+            text-shadow: none !important;
+            letter-spacing: 0.3px;
+        }
+
+        .fish-download-card .fish-download-btn:hover,
+        .fish-download-btn:hover,
+        a.fish-download-btn:hover,
+        .fish-invoice-block .fish-download-btn:hover {
+            background: linear-gradient(135deg, #2a7fef 0%, #1a6cdc 100%) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 20px rgba(30, 111, 223, 0.4) !important;
+            color: #ffffff !important;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 750px) {
+            body {
+                padding: 20px 16px;
+            }
+            .fish-feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .fish-wiki-desc {
+                padding: 16px 20px;
+                font-size: 0.98rem;
+            }
+            .fish-section-title {
+                font-size: 1.4rem;
+            }
+            .fish-feature-item {
+                padding: 14px 18px;
+            }
+            .fish-highlight-card {
+                padding: 18px 20px;
+            }
+            .fish-safety-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 24px;
+            }
+            .fish-safety-badge {
+                white-space: normal;
+                align-self: flex-start;
+            }
+            .fish-security-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .fish-security-badge {
+                white-space: normal;
+                align-self: flex-start;
+            }
+            .fish-download-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px 20px;
+            }
+            .fish-download-info {
+                justify-content: center;
+            }
+            .fish-download-card .fish-download-btn,
+            .fish-download-btn,
+            a.fish-download-btn,
+            .fish-invoice-block .fish-download-btn {
+                padding: 12px 28px !important;
+                font-size: 0.9rem !important;
+            }
+        }
+
+        /* 辅助焦点 & 性能优化 */
+        .fish-feature-item, .fish-download-btn {
+            will-change: transform;
+        }
+        .fish-download-btn:active {
+            transform: scale(0.97) !important;
+        }
+        /* 增强安全背书感 */
+        .fish-security-card .fish-security-desc strong {
+            color: #0e6b9e;
+        }
+    </style>
+</head>
+<body>
+<div class="fish-invoice-block">
+    <!-- 描述区域 -->
+    <div class="fish-wiki-desc">
+        🧾 飞鱼开票助手是一款专为企业开票场景打造的智能工具，兼容<strong>数电票与税盘发票系统</strong>。提供智能赋码、批量税率匹配、清单自动生成等核心能力，可一键输出符合电子税务局标准的导入文件。高效应对长清单、混合税率场景，自动精准匹配税收分类编码，大幅降低人工操作与税务风险，助力企业实现<strong>安全、高效、合规开票</strong>。
+    </div>
+
+    <!-- 核心功能矩阵 -->
+    <div class="fish-section">
+        <div class="fish-section-header">
+            <span class="fish-section-icon">⚙️</span>
+            <h2 class="fish-section-title">核心能力</h2>
+        </div>
+        <div class="fish-feature-grid">
+            <div class="fish-feature-item"><div class="fish-feature-icon">🔖</div><div class="fish-feature-text"><strong>智能赋码</strong> — 自动匹配税收分类编码，告别手动查询</div></div>
+            <div class="fish-feature-item"><div class="fish-feature-icon">📊</div><div class="fish-feature-text"><strong>批量税率匹配</strong> — 混合税率自动识别，无需人工逐行填写</div></div>
+            <div class="fish-feature-item"><div class="fish-feature-icon">📋</div><div class="fish-feature-text"><strong>清单自动生成</strong> — 一键生成符合电子税务局标准的导入文件</div></div>
+            <div class="fish-feature-item"><div class="fish-feature-icon">📂</div><div class="fish-feature-text"><strong>任意Excel导入</strong> — 支持任意格式Excel文件，智能解析生成开票数据</div></div>
+            <div class="fish-feature-item"><div class="fish-feature-icon">📦</div><div class="fish-feature-text"><strong>产品信息库</strong> — 自动管理常用产品信息，税收分类使用更智能</div></div>
+            <div class="fish-feature-item"><div class="fish-feature-icon">🔄</div><div class="fish-feature-text"><strong>税盘+数电双兼容</strong> — 同时支持传统税盘开票与数电票系统</div></div>
+        </div>
+    </div>
+
+    <!-- 效率飙升亮点区块 -->
+    <div class="fish-highlight-card">
+        <div class="fish-highlight-title">
+            <span>📈</span> 效率飙升 · 聪明省心
+        </div>
+        <div class="fish-highlight-grid">
+            <div class="fish-highlight-item"><span class="fish-highlight-icon">🚀</span> 无论清单几行还是上千行，一键智能匹配正确税收分类编码</div>
+            <div class="fish-highlight-item"><span class="fish-highlight-icon">🎯</span> 混合税率自动识别并应用对应税率，无需人工填写</div>
+            <div class="fish-highlight-item"><span class="fish-highlight-icon">📚</span> 自动管理本企业常用产品信息，税收分类使用更智能</div>
+            <div class="fish-highlight-item"><span class="fish-highlight-icon">📎</span> 支持任意格式Excel文件导入，一键生成符合标准的导入文件</div>
+        </div>
+    </div>
+
+    <!-- 本地化安全独立亮点卡片 -->
+    <div class="fish-security-card">
+        <div class="fish-security-icon">🔒🏢</div>
+        <div class="fish-security-content">
+            <div class="fish-security-title">本地化数据处理 · 财务信息安全</div>
+            <div class="fish-security-desc">所有开票资料、产品信息、税收分类数据均存储于本地设备，<strong>不上传、不收集、不泄露</strong>任何敏感信息。企业核心财务数据自主掌控，彻底杜绝云端泄露风险。</div>
+        </div>
+        <div class="fish-security-badge">✨ 零数据上云 | 私有级安全</div>
+    </div>
+
+    <!-- 安心开票区域 -->
+    <div class="fish-safety-card">
+        <div class="fish-safety-text">
+            <div class="fish-safety-icon">🛡️✨</div>
+            <div>
+                <div class="fish-safety-title">开票更安心</div>
+                <div class="fish-safety-desc">确保使用准确的税收编码和税率，有效规避因分类或税率错误带来的潜在税务风险，让您开票更放心。</div>
+            </div>
+        </div>
+        <div class="fish-safety-badge">✅ 合规保障 | 风险可控</div>
+    </div>
+
+    <!-- 视频模块 - 自动循环播放 增加备用资源确保显示 -->
+    <div class="fish-video-section">
+        <div class="fish-video-wrapper">
+            <video autoplay="" loop="" muted="" playsinline="" poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 16 9'%3E%3Crect width='100%25' height='100%25' fill='%23365c7a'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffffcc' font-size='1.2'%3E飞鱼开票演示%3C/text%3E%3C/svg%3E">
+                <source src="https://v2.sohu.com/v/url/632043700_120419283.MP4" type="video/mp4">
+                <!-- 备选降级文本说明 -->
+                您的浏览器不支持视频播放，可访问官网查看操作演示。
+            </video>
+        </div>
+        <div class="fish-video-caption">
+            🎥 飞鱼开票助手操作演示 — 智能赋码、批量开票、清单生成全流程
+        </div>
+    </div>
+
+    <!-- 软件下载模块 - 蓝色按钮 + 完全独立外链 -->
+    <div class="fish-download-card">
+        <div class="fish-download-info">
+            <div class="fish-download-icon">💾⬇️</div>
+            <div class="fish-download-text">
+                <h3>飞鱼开票助手（在线版） · 下载安装</h3>
+                <p>自动赋码 | 匹配税率 | 智能编码 | 一键生成电子税务局发票导入文件</p>
+                <div class="fish-download-version">请点击下方按钮，进入下载页面选择「开票导入助手（在线版）」</div>
+            </div>
+        </div>
+        <a href="http://www.52fyb.cn/softlist" class="fish-download-btn" target="_blank" rel="noopener noreferrer">
+            ⬇️ 立即下载
+        </a>
+    </div>
+
+    <!-- 版权备注/优雅注明，增加信任 -->
+    <div style="text-align: center; margin-top: 28px; font-size: 0.7rem; color: #7e95ae; border-top: 1px solid #e0edf5; padding-top: 20px;">
+        飞鱼开票助手 · 让开票更安全更高效 | 本地存储零泄露风险
+    </div>
+</div>
+
+<!-- 增加轻量级平滑确保视频体验：如果视频加载失败不报错；同时保证无交互干扰 -->
+<script>
+    (function(){
+        // 确保视频元素如果因为网络问题导致无法加载，不会破坏界面，静默降级
+        const videos = document.querySelectorAll('.fish-video-wrapper video');
+        if(videos.length){
+            videos.forEach(video => {
+                // 添加加载错误友好控制台日志（可选）
+                video.addEventListener('error', (e) => {
+                    console.warn('视频加载失败，可能是网络或资源路径问题，请检查演示链接。不影响其他功能');
+                    // 可以给一个占位文本提示，但无需过度干扰界面
+                    const wrapper = video.closest('.fish-video-wrapper');
+                    if(wrapper && !wrapper.querySelector('.video-fallback-note')){
+                        const note = document.createElement('div');
+                        note.className = 'video-fallback-note';
+                        note.style.position = 'absolute';
+                        note.style.top = '0';
+                        note.style.left = '0';
+                        note.style.width = '100%';
+                        note.style.height = '100%';
+                        note.style.display = 'flex';
+                        note.style.alignItems = 'center';
+                        note.style.justifyContent = 'center';
+                        note.style.backgroundColor = '#e9f2fc';
+                        note.style.color = '#2c6990';
+                        note.style.fontSize = '0.9rem';
+                        note.style.fontWeight = '500';
+                        note.style.padding = '20px';
+                        note.style.textAlign = 'center';
+                        note.style.backdropFilter = 'blur(2px)';
+                        note.innerText = '🎬 演示视频暂时无法播放，您可访问官网 www.52fyb.cn 查看操作演示';
+                        wrapper.appendChild(note);
+                    }
+                });
+                // 自动播放强制加上确保，如果因为浏览器策略未自动播放，没关系用户不自动也不影响
+                video.play().catch(e => {
+                    // 静默失败，绝大部分浏览器 muted + autoplay 可以自动播放
+                    console.debug('自动播放被限制无需处理');
+                });
+            });
+        }
+
+        // 可选：针对下载按钮加埋点提示（纯前端友好，不影响业务）无侵入
+        const downBtn = document.querySelector('.fish-download-btn');
+        if(downBtn){
+            downBtn.addEventListener('click', () => {
+                // 用户点击去往官网下载, 无额外数据上传，纯本地指引
+                console.log('用户跳转下载中心: http://www.52fyb.cn/softlist');
+            });
+        }
+    })();
+</script>
+</body>
+</html>
