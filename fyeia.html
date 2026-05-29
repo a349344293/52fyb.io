@@ -226,6 +226,71 @@
             border: 1px solid #ffffff;
         }
 
+        /* 软件下载模块 — 简洁卡片风格，无复杂提示 */
+        .download-section {
+            margin-top: 44px;
+            background: #FFFFFF;
+            border-radius: 28px;
+            padding: 28px 36px;
+            border: 1px solid #eef2fa;
+            box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .download-info-compact {
+            flex: 2;
+        }
+        .download-info-compact h3 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #1f2f44;
+            margin-bottom: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .download-info-compact p {
+            font-size: 0.95rem;
+            color: #2c577c;
+            max-width: 480px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .download-btn-wrapper {
+            flex-shrink: 0;
+        }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(105deg, #0a5dc2, #2b7be4);
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 14px 36px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.25s;
+            box-shadow: 0 8px 16px -8px rgba(15, 107, 255, 0.35);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+        .download-btn:hover {
+            background: linear-gradient(105deg, #0f4a9e, #1e62c5);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 22px -10px rgba(15, 107, 255, 0.45);
+        }
+        .download-btn:active {
+            transform: translateY(1px);
+        }
+
         .footer-meta {
             margin-top: 40px;
             padding-top: 20px;
@@ -283,6 +348,19 @@
                 font-size: 0.6rem;
                 margin-left: 6px;
             }
+            .download-section {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px 24px;
+            }
+            .download-btn {
+                padding: 12px 28px;
+                font-size: 1rem;
+                white-space: nowrap;
+            }
+            .download-info-compact h3 {
+                font-size: 1.4rem;
+            }
         }
         
         * {
@@ -333,6 +411,7 @@
             </div>
         </div>
 
+        <!-- ========== 本地化·私有部署级安全 模块 (位置保持不变) ========== -->
         <div class="highlight-note">
             <div class="note-text">
                 <div class="shield-icon">🛡️🔐</div>
@@ -343,6 +422,21 @@
             </div>
             <div class="upgrade-tag">✨ 自动升级 | 永久掌控数据</div>
         </div>
+
+        <!-- ========== 软件下载模块 (移到本地化安全模块后面，极简样式，仅简要说明+下载按钮) ========== -->
+        <div class="download-section" id="software-download">
+            <div class="download-info-compact">
+                <h3>📥 飞鱼软件下载</h3>
+                <p>获取最新版电子发票台账及配套工具，支持防止重复报销、真伪查验与全票种管理。</p>
+            </div>
+            <div class="download-btn-wrapper">
+                <a href="http://www.52fyb.cn/softlist" class="download-btn" target="_blank" rel="noopener noreferrer">
+                    ⬇️ 立即下载
+                </a>
+            </div>
+        </div>
+        <!-- ========== 软件下载模块结束 ========== -->
+
         <div class="footer-meta">
             <span>📌 支持增值税全系列发票、区块链发票、非税票据等多种票据 ✨</span>
             <span>⚙️ 扫码枪 / 微信扫码便捷录入</span>
@@ -356,6 +450,8 @@
     (function() {
         const CUSTOM_REDIRECT_URL = "http://www.52fyb.cn/softlist";  
         const TARGET_ATTR = "_blank";   
+        
+        // 标题链接精准控制
         const titleLink = document.getElementById('dynamicLink');
         if (titleLink) {
             titleLink.setAttribute('href', CUSTOM_REDIRECT_URL);
@@ -372,6 +468,15 @@
             }
         }
         
+        // 确保下载模块按钮链接正确 (已内联，但再做一次保障)
+        const downloadBtn = document.querySelector('.download-btn');
+        if (downloadBtn && downloadBtn.getAttribute('href') !== CUSTOM_REDIRECT_URL) {
+            downloadBtn.setAttribute('href', CUSTOM_REDIRECT_URL);
+            downloadBtn.setAttribute('target', '_blank');
+            downloadBtn.setAttribute('rel', 'noopener noreferrer');
+        }
+        
+        // 禁用全选/复制/右键/拖拽 (维持原有保护)
         document.addEventListener('selectstart', function(e) {
             e.preventDefault();
             return false;
@@ -400,12 +505,16 @@
             return false;
         });
         
-        document.addEventListener('touchstart', function(e) {
-        });
-        
+        // 所有包含52fyb链接确保安全跳转
+        const allExternalLinks = document.querySelectorAll('a[href*="52fyb.cn"]');
+        for (let link of allExternalLinks) {
+            if (!link.getAttribute('target')) {
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            }
+        }
     })();
 </script>
-
 
 </body>
 </html>
