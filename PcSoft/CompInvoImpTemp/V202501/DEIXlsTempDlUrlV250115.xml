@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DownLoad>
+  <XlsFile>
+    <Type>通用模板</Type>
+    <Size>72373</Size>
+    <MD5>C959FDAD0411CACEAB3ACCEA0E08BE1E</MD5>
+    <Url>https://lanzoui.com/i4zaz2rnjoof</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>建筑服务</Type>
+    <Size>72869</Size>
+    <MD5>6DC1F1B3CA497A52BF2D1E8E845B4E59</MD5>
+    <Url>https://lanzoui.com/ionJn2rnjone</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>货物运输服务</Type>
+    <Size>72957</Size>
+    <MD5>A0886FFCA864F5FC6191DAC11929077F</MD5>
+    <Url>https://lanzoui.com/iBVCY2rnjomd</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>不动产销售</Type>
+    <Size>70414</Size>
+    <MD5>E1C415054C4AA565E300CD567EE76960</MD5>
+    <Url>https://lanzoui.com/irqsD2rnjolc</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>收购发票</Type>
+    <Size>795964</Size>
+    <MD5>E3035ED507256CB11280780E54F54D62</MD5>
+    <Url>https://lanzoui.com/ieHfq3pehv5g</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>不动产经营租赁服务</Type>
+    <Size>70844</Size>
+    <MD5>A7975D9B4A021DA20FF980D617C23785</MD5>
+    <Url>https://lanzoui.com/icObk46cj1qj</Url>
+  </XlsFile>
+  <XlsFile>
+    <Type>不动产租赁</Type>
+    <Size>70844</Size>
+    <MD5>A7975D9B4A021DA20FF980D617C23785</MD5>
+    <Url>https://lanzoui.com/icObk46cj1qj</Url>
+  </XlsFile>
+
+  <LzApiInfo> 
+    <Api>
+      <apiName>qaiu</apiName>
+      <apiUrl>https://lz.qaiu.top/json/parser</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode>data</ParentNode>
+        <targetUrl>directLink</targetUrl>
+      </retUrl>
+    </Api>
+
+    <Api>
+      <apiName>fyb</apiName>
+      <apiUrl>http://www.52fyb.cn/PcSoft/LanzouApi/index.php</apiUrl>
+      <retCode>
+        <key>code</key>
+        <value>200</value>
+      </retCode>
+      <retUrl>
+        <ParentNode></ParentNode>
+        <targetUrl>downUrl</targetUrl>
+      </retUrl>
+    </Api>
+    
+  </LzApiInfo>
+</DownLoad>
